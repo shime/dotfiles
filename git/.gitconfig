@@ -1,0 +1,15 @@
+[user]
+	name = Hrvoje Šimić
+	email = shime.ferovac@gmail.com
+[credential]
+	helper = cache
+[pull]
+	rebase = true
+[github]
+	user = shime
+[web]
+	browser = firefox
+[push]
+	default = current
+[color]
+	ui = true

@@ -1,0 +1,31 @@
+#!/bin/sh
+cat <<EOF
+## Bash keyboard shortcuts
+
+### Characters
+
+* move back one character: Ctrl + b
+* move forward one character: Ctrl + f
+* delete current character: Ctrl + d
+* delete previous character: backspace
+
+### Words
+
+* move back one word: Alt + b
+* move forward one word: Alt + f
+* delete the word before the cursor: Ctrl + w
+* delete the word after the cursor: Alt + d
+
+### Lines
+
+* go to the beginning of the current line: Ctrl + a
+* go to the end of the current line: Ctrl + e
+* clear the line before the cursor: Ctrl + u
+* clear the line after the cursor: Ctrl + k
+
+### Search
+
+* forward incremental: Ctrl + s
+* backward incremental: Ctrl + r
+
+EOF

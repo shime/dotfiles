@@ -1,0 +1,14 @@
+vim/.vim/backup/*
+vim/.vim/.NERDTreeBookmarks
+vim/.vim/.netrwhist
+vim/.vim/.VimballRecord
+mutt/.mutt/cache
+.DS_Store
+git-remote-https.exe.stackdump
+*.swp
+vim/.vim/.viminfo
+dotfiles_other/.dotfiles_other/*
+!dotfiles_other/.dotfiles_other/README.md
+*.add.spl
+
+utils/bin/pair

@@ -1,0 +1,32 @@
+alias ..='cd ..'
+alias l='ls'
+alias lss='ls++'
+alias v='vim'
+
+alias vimrc='vim ~/.vimrc'
+alias tmuxrc='vim ~/.tmux.conf'
+alias zshrc='vim ~/.zshrc'
+alias bashrc='vim ~/.bashrc'
+alias aliases='vim ~/.aliases'
+
+alias elasticsearch="/opt/elasticsearch-0.90.3/bin/elasticsearch"
+
+alias clone='git clone'
+
+alias close='tmux kill-session -t'
+alias "\?"="shortcuts"
+alias ack-grep='ack'
+
+alias r="rails $*"
+alias bi="bundle install"
+alias be="bundle exec $*"
+alias rt='rake test'
+alias irb=pry
+alias m="rake db:migrate"
+alias z="zeus $*"
+
+alias G="vim Gemfile"
+alias R="vim Rakefile"
+alias C="rails console"
+alias grn="grep -rn"
+alias clr="clear"

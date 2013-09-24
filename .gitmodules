@@ -1,0 +1,75 @@
+# Submodules in private repos
+
+# git submodule add git://git_repo.com/my/submodule.git private/some_dir
+
+# git submodule update --init           # fetches submodules
+
+[submodule "private/ssh"]
+	path = private/ssh
+	url = https://shime@bitbucket.org/shime/ssh.git
+[submodule "private/dotfiles"]
+	path = private/dotfiles
+	url = git@bitbucket.org:bsutic/private_dotfiles.git
+[submodule "vim/.vim/vundle"]
+	path = vim/.vim/vundle
+	url = https://github.com/gmarik/vundle.git
+[submodule "private/notes/Notes"]
+	path = private/notes/Notes
+	url = git@github.com:bsutic/Notes.git
+[submodule "private/notes_files/notes_files"]
+	path = private/notes_files/notes_files
+	url = git@github.com:bsutic/notes_files.git
+[submodule "git/.scm_breeze"]
+	path = git/.scm_breeze
+	url = https://github.com/ndbroadbent/scm_breeze.git
+[submodule "zsh/.oh-my-zsh"]
+	path = zsh/.oh-my-zsh
+	url = git@github.com:shime/oh-my-zsh.git
+[submodule "external/mislav"]
+	path = external/mislav
+	url = https://github.com/mislav/dotfiles.git
+[submodule "vim/.vim/bundle/ctrlp.vim"]
+	path = vim/.vim/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule "vim/.vim/bundle/vim-rails"]
+	path = vim/.vim/bundle/vim-rails
+	url = https://github.com/tpope/vim-rails.git
+[submodule "vim/.vim/bundle/vimux"]
+	path = vim/.vim/bundle/vimux
+	url = https://github.com/benmills/vimux.git
+[submodule "vim/.vim/bundle/vim-turbux"]
+	path = vim/.vim/bundle/vim-turbux
+	url = https://github.com/jgdavey/vim-turbux.git
+[submodule "vim/.vim/bundle/vim-tmux-navigator"]
+	path = vim/.vim/bundle/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "vim/.vim/bundle/ack.vim"]
+	path = vim/.vim/bundle/ack.vim
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "vim/.vim/bundle/file-line"]
+	path = vim/.vim/bundle/file-line
+	url = https://github.com/bogado/file-line.git
+[submodule "vim/.vim/bundle/vim-commentary"]
+	path = vim/.vim/bundle/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "vim/.vim/bundle/vim-matchit"]
+	path = vim/.vim/bundle/vim-matchit
+	url = https://github.com/tsaleh/vim-matchit.git
+[submodule "vim/.vim/bundle/vim-endwise"]
+	path = vim/.vim/bundle/vim-endwise
+	url = https://github.com/tpope/vim-endwise.git
+[submodule "vim/.vim/bundle/vim-fugitive"]
+	path = vim/.vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim/.vim/bundle/vim-surround"]
+	path = vim/.vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "vim/.vim/bundle/vim-sparkup"]
+	path = vim/.vim/bundle/vim-sparkup
+	url = https://github.com/tristen/vim-sparkup.git
+[submodule "vim/.vim/bundle/html5.vim"]
+	path = vim/.vim/bundle/html5.vim
+	url = https://github.com/othree/html5.vim.git
+[submodule "vim/.vim/bundle/vim-unimpaired"]
+	path = vim/.vim/bundle/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git

@@ -1,0 +1,4 @@
+#!/bin/sh
+set -e
+PATH="/usr/local/bin:$PATH"
+git ls-files | cscope -i - -b -f cscope.out

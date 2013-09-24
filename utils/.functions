@@ -1,0 +1,28 @@
+#!/bin/sh
+# Contains convenient functions shared between bash and zsh
+top-history(){
+  history | awk '{print $2}' | awk 'BEGIN {FS="|"}{print $1}' | sort | uniq -c | sort -nr | head
+}
+
+# Kill process by name
+nuke(){
+  kill -9 `pgrep $*`
+}
+
+# Shutdown 1 hour from now
+sdn(){
+  sudo shutdown -h `date --date="next hour" +"%H:%M"`
+}
+
+# Making git play nicely when pairing.
+hitch() {
+  command hitch "$@"
+  if [[ -s "$HOME/.hitch_export_authors" ]] ; then source "$HOME/.hitch_export_authors" ; fi
+}
+alias unhitch='hitch -u'
+
+# Makes adding aliases easier
+add-alias(){
+  echo "alias $@" >> ~/.aliases
+  source ~/.aliases
+}
