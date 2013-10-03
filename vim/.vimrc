@@ -94,7 +94,7 @@ map <leader>v :view %%
 set history=10000
 
 " Turbux uses 'cucumber -rfeatures' by default, override it
-let g:turbux_command_cucumber = 'cucumber' 
+let g:turbux_command_cucumber = 'cucumber -r features' 
 
 " Add routes to rails.vim
 command! Rroutes :RE config/routes.rb
