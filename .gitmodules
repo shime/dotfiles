@@ -73,3 +73,12 @@
 [submodule "vim/.vim/bundle/vim-unimpaired"]
 	path = vim/.vim/bundle/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
+[submodule "vim/.vim/bundle/vim-handlebars"]
+	path = vim/.vim/bundle/vim-handlebars
+	url = https://github.com/nono/vim-handlebars.git
+[submodule "vim/.vim/bundle/vim-coffee-script"]
+	path = vim/.vim/bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "vim/.vim/bundle/vim-haml"]
+	path = vim/.vim/bundle/vim-haml
+	url = https://github.com/tpope/vim-haml.git
