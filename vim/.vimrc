@@ -10,7 +10,6 @@ syntax enable
 
 " Try to set the color scheme if it's available
 set t_Co=256
-set background=dark
 color grb256
 
 " Highlight current cursor position
