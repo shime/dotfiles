@@ -61,7 +61,6 @@ export RUBY_HEAP_SLOTS_INCREMENT=300000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=79000000
 
-export TERM=xterm-256color
 export EDITOR=vim
 
 source /usr/local/share/chruby/chruby.sh # enable chruby
