@@ -44,7 +44,7 @@ DISABLE_CORRECTION="true"
 
 source $ZSH/oh-my-zsh.sh
 
-[ -s "/home/hrvoje/.scm_breeze/scm_breeze.sh" ] && source "/home/hrvoje/.scm_breeze/scm_breeze.sh"
+[ -s "/home/shime/.scm_breeze/scm_breeze.sh" ] && source "/home/shime/.scm_breeze/scm_breeze.sh"
 
 # turn off Ctrl + s XOFF (XON is Ctrl + q)
 stty ixany

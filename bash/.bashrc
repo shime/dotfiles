@@ -1,7 +1,4 @@
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-source /home/hrvoje/.rvm/scripts/rvm
-
-[ -s "/home/hrvoje/.scm_breeze/scm_breeze.sh" ] && source "/home/hrvoje/.scm_breeze/scm_breeze.sh"
+[ -s "/home/shime/.scm_breeze/scm_breeze.sh" ] && source "/home/shime/.scm_breeze/scm_breeze.sh"
 
 stty ixany
 stty ixoff -ixon
