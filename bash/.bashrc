@@ -12,4 +12,5 @@ source /usr/local/share/chruby/chruby.sh # enable chruby
 source ~/.aliases
 source ~/.functions
 
+RUBIES=(/usr/local/rubies/ruby-2.0.0-p247)
 chruby 2.0
