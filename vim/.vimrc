@@ -86,8 +86,10 @@ imap <c-l> <space>=><space>
 
 " Open files in directory of current file
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
 map <leader>e :edit %%
-map <leader>v :view %%
+map <Leader>s :split %%
+map <Leader>v :vnew %%
 
 " Remember more commands and search history
 set history=10000
