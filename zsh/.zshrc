@@ -52,7 +52,6 @@ stty ixoff -ixon
 stty stop undef
 stty start undef
 
-export LFS=/mnt/lfs
 export PATH="$PATH:$HOME/bin"
 
 export RUBY_HEAP_MIN_SLOTS=800000
