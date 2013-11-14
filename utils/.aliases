@@ -32,3 +32,4 @@ alias grn="grep -rn"
 alias clr="clear"
 
 alias tmux='TERM=xterm-256color tmux'
+alias git=hub
