@@ -36,3 +36,5 @@ alias kr='karma run'
 
 alias push="git push"
 alias pull="git pull"
+
+alias t="tmux"
