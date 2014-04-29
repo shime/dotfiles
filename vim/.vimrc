@@ -144,3 +144,8 @@ let g:tmuxline_separators = {
     \ 'right' : '',
     \ 'right_alt' : '<',
     \ 'space' : ' '}
+
+" Spelling stuff
+autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd BufRead,BufNewFile *.markdown setlocal spell
+autocmd FileType gitcommit setlocal spell
