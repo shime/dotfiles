@@ -135,3 +135,11 @@ vnoremap YY "+yy
 
 nnoremap P "+p
 vnoremap P "+p
+
+let g:airline_theme='jellybeans'
+let g:tmuxline_separators = {
+    \ 'left' : '',
+    \ 'left_alt': '>',
+    \ 'right' : '',
+    \ 'right_alt' : '<',
+    \ 'space' : ' '}
