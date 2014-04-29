@@ -13,3 +13,13 @@
 	default = current
 [color]
 	ui = true
+[url "https://"]
+	insteadOf = git://
+[url "https://github.com/"]
+	insteadOf = git://github.com/
+[help]
+	autocorrect = 7
+[ghi "highlight"]
+	style = vim
+[ghi]
+	editor = vim

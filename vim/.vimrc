@@ -10,10 +10,12 @@ syntax enable
 
 " Try to set the color scheme if it's available
 set t_Co=256
-color grb256
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
 
 " Highlight current cursor position
-set cursorline
+" set cursorline
 set cmdheight=1
 set switchbuf=useopen
 set showtabline=1
@@ -44,6 +46,8 @@ endfunction
 nnoremap <leader>B :call ToggleBundler()<cr>
 function! ToggleBundler()
   if g:turbux_command_prefix == 'bundle exec'
+
+
     echo 'bundle exec disabled'
     let g:turbux_command_prefix = ''
   else
@@ -87,7 +91,8 @@ imap <c-l> <space>=><space>
 " Open files in directory of current file
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
-map <leader>e :edit %%
+map <leader>e :edit %%<CR>
+map <leader>E :edit %%
 map <Leader>s :split %%
 map <Leader>v :vnew %%
 
@@ -118,3 +123,15 @@ let g:rails_projections = {
       \ "related": "features/%s.feature"
       \}
       \}
+
+let g:ctrlp_custom_ignore = 'app\/assets\/javascripts\/node_modules\|DS_Store\|\.git\|tmp'
+let g:ctrlp_by_filename = 1
+let g:ctrlp_regexp = 1
+
+nnoremap Y "+y
+vnoremap Y "+y
+nnoremap YY "+yy
+vnoremap YY "+yy
+
+nnoremap P "+p
+vnoremap P "+p

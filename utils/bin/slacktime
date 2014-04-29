@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+flag=0
+while read -r line; do
+  [[ $line =~ "# WORKTIME" ]] && flag=1
+  [[ $flag -eq 1 ]] && continue
+  echo $line
+done < /etc/hosts > /tmp/hosts
+
+sudo cp /tmp/hosts /etc/hosts

@@ -25,4 +25,10 @@ alias unhitch='hitch -u'
 add-alias(){
   echo "alias $@" >> ~/.aliases
   source ~/.aliases
+
+}
+
+# For showing git branch in PS1
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }

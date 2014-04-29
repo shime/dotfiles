@@ -191,7 +191,7 @@ map k gk
 
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
-map <C-space> ?
+map <c-space> ?
 
 " Clear the search buffer when hitting return
 function! MapCR()
@@ -241,7 +241,7 @@ set viminfo^=%
 set laststatus=2
 
 " " Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l 
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

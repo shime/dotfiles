@@ -14,14 +14,12 @@ alias elasticsearch="/opt/elasticsearch-0.90.3/bin/elasticsearch"
 alias clone='git clone'
 
 alias close='tmux kill-session -t'
-alias "\?"="shortcuts"
 alias ack-grep='ack'
 
 alias r="rails $*"
 alias bi="bundle install"
 alias be="bundle exec $*"
 alias rt='rake test'
-alias irb=pry
 alias m="rake db:migrate"
 alias z="zeus $*"
 
@@ -32,4 +30,9 @@ alias grn="grep -rn"
 alias clr="clear"
 
 alias tmux='TERM=xterm-256color tmux'
-alias git=hub
+alias ks='karma start unit-tests.conf.js --no-single-run'
+alias pacman='sudo pacman'
+alias kr='karma run'
+
+alias push="git push"
+alias pull="git pull"
