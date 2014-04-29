@@ -1,6 +1,6 @@
-# Sexy Solarized Bash Prompt, inspired by "Extravagant Zsh Prompt"
-# Customized for the Solarized color scheme by Sean O'Neil
- 
+# stolen from https://gist.github.com/SeanPONeil/3717199
+# tweaked to not show the git info unless in git repo
+
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]]  && infocmp gnome-256color >/dev/null 2>&1; then TERM=gnome-256color; fi
 if tput setaf 1 &> /dev/null; then
     tput sgr0
