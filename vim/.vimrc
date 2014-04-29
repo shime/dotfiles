@@ -137,6 +137,8 @@ nnoremap P "+p
 vnoremap P "+p
 
 let g:airline_theme='jellybeans'
+let g:airline_detect_whitespace=0
+
 let g:tmuxline_separators = {
     \ 'left' : '',
     \ 'left_alt': '>',
