@@ -91,8 +91,7 @@ imap <c-l> <space>=><space>
 " Open files in directory of current file
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
-map <leader>e :edit %%<CR>
-map <leader>E :edit %%
+map <leader>e :edit %%
 map <Leader>s :split %%
 map <Leader>v :vnew %%
 
