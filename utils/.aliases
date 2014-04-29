@@ -38,3 +38,4 @@ alias push="git push"
 alias pull="git pull"
 
 alias t="tmux"
+alias ls="ls --color"
