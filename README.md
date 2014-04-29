@@ -17,7 +17,6 @@ If there are conflicts, the dotfiles from the home directory will be backuped to
 ./.dotfiles/dotify uninstall
 ```
 
-
 ### Adding new dotfiles
 
 - make a new directory inside the dotfiles dir: `~/.dotfiles/new_dir`
@@ -40,7 +39,5 @@ gets symlinked.
 
 ### Thanks
 
-Thanks to [Bruno](https://github.com/bsutic) for making the installation script and inspiring me for creating
+Thanks to [Bruno](https://github.com/bruno-) for making the installation script and inspiring me for creating
 my own dotfiles.
-
-You can create your own from his [repo](https://github.com/bsutic/dotfiles).
