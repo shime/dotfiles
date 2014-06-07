@@ -7,6 +7,8 @@ hi pythonSpaceError ctermbg=red guibg=red
 
 hi Comment ctermfg=darkgray
 
+hi Normal		ctermfg=252		ctermbg=16		cterm=none		guifg=#e3e0d7	guibg=#242424	gui=none
+
 hi StatusLine ctermbg=darkgrey ctermfg=white
 hi StatusLineNC ctermbg=black ctermfg=lightgrey
 hi VertSplit ctermbg=black ctermfg=lightgrey
