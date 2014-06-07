@@ -24,5 +24,9 @@ export HISTSIZE=100000                   # increase size of history
 export HISTFILESIZE=100000               # 
 shopt -s histappend                      # append to history, don't overwrite it
 
-# save and reload the history after each command finishes
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+export PYENV_ROOT="${HOME}/.pyenv"
+
+if [ -d "${PYENV_ROOT}" ]; then
+  export PATH="${PYENV_ROOT}/bin:${PATH}"
+  eval "$(pyenv init -)"
+fi
