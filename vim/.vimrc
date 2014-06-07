@@ -126,8 +126,8 @@ vnoremap Y "+y
 nnoremap YY "+yy
 vnoremap YY "+yy
 
-nnoremap P "+p
-vnoremap P "+p
+nnoremap PP "+p
+vnoremap PP "+p
 
 let g:airline_theme='jellybeans'
 let g:airline_detect_whitespace=0
