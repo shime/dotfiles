@@ -79,12 +79,6 @@ map <leader>N :call RenameFile()<cr>
 " Stop clearing screen when suspended
 set t_ti= t_te=
 
-" Show line numbers
-set number
-
-" Set relative numbering by default
-set rnu
-
 " Insert a hash rocket with <c-l>
 imap <c-l> <space>=><space>
 
@@ -149,3 +143,7 @@ let g:tmuxline_separators = {
 autocmd BufRead,BufNewFile *.md setlocal spell
 autocmd BufRead,BufNewFile *.markdown setlocal spell
 autocmd FileType gitcommit setlocal spell
+
+" Add little right margin
+hi! link FoldColumn Normal
+set foldcolumn=1
