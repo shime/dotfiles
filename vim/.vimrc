@@ -117,7 +117,7 @@ let g:rails_projections = {
       \}
       \}
 
-let g:ctrlp_custom_ignore = 'app\/assets\/javascripts\/node_modules\|DS_Store\|\.git\|tmp'
+let g:ctrlp_custom_ignore = 'app\/assets\/javascripts\/node_modules\|DS_Store\|\.git\|tmp\|node_modules'
 let g:ctrlp_by_filename = 1
 let g:ctrlp_regexp = 1
 
