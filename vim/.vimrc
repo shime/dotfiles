@@ -46,8 +46,6 @@ endfunction
 nnoremap <leader>B :call ToggleBundler()<cr>
 function! ToggleBundler()
   if g:turbux_command_prefix == 'bundle exec'
-
-
     echo 'bundle exec disabled'
     let g:turbux_command_prefix = ''
   else
@@ -60,7 +58,7 @@ endfunction
 map <leader>rs :RSspec 
 
 " Source file with <leader>s
-map <leader>s :so %<CR>
+map <leader>S :so %<CR>
 
 " Editing ~/.vimrc with ,v
 nmap <leader>V :tabedit $MYVIMRC<CR>
