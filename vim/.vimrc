@@ -150,3 +150,19 @@ let g:slime_target="tmux"
 let g:slime_default_config = {"socket_name": "default", "target_pane": "1"}
 let g:niji_matching_filetypes = ['javascript', 'js']
 
+" Status line stuff
+
+set statusline=%<%1*\ %f\ %*       " filename
+set statusline+=%2*%m%r%*          " modified, readonly
+set statusline+=\ %3*%y%*          " filetype
+set statusline+=\ %4*%{fugitive#head()}%0*
+set statusline+=%=                 " left-right separation point
+set statusline+=\ %5*%l%*/%L[%p%%]%5* " current line/total lines
+
+hi StatusLine term=inverse,bold cterm=NONE ctermbg=24 ctermfg=189
+hi StatusLineNC term=inverse,bold cterm=NONE ctermbg=24 ctermfg=153
+hi User1 term=inverse,bold cterm=NONE ctermbg=29 ctermfg=159
+hi User2 term=inverse,bold cterm=NONE ctermbg=29 ctermfg=16
+hi User3 term=inverse,bold cterm=NONE ctermbg=24
+hi User4 term=inverse,bold cterm=NONE ctermbg=24 ctermfg=221
+hi User5 term=inverse,bold cterm=NONE ctermbg=24 ctermfg=209
