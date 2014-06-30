@@ -119,13 +119,14 @@ let g:ctrlp_custom_ignore = 'app\/assets\/javascripts\/node_modules\|DS_Store\|\
 let g:ctrlp_by_filename = 1
 let g:ctrlp_regexp = 1
 
-nnoremap Y "+y
-vnoremap Y "+y
-nnoremap YY "+yy
-vnoremap YY "+yy
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
 
-nnoremap PP "+p
-vnoremap PP "+p
+nnoremap <leader>p "+p
+vnoremap <leader>p "+p
+
+nnoremap <leader>d "+d
+vnoremap <leader>d "+d
 
 let g:airline_theme='jellybeans'
 let g:airline_detect_whitespace=0
