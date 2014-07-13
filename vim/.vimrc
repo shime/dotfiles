@@ -167,3 +167,5 @@ hi User2 term=inverse,bold cterm=NONE ctermbg=29 ctermfg=16
 hi User3 term=inverse,bold cterm=NONE ctermbg=24
 hi User4 term=inverse,bold cterm=NONE ctermbg=24 ctermfg=221
 hi User5 term=inverse,bold cterm=NONE ctermbg=24 ctermfg=209
+
+nnoremap gz :!zeal --query "<cword>"&<CR><CR>
