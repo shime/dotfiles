@@ -41,3 +41,5 @@ alias t="tmux"
 alias ls="ls --color"
 alias grep="grep --color"
 alias n="npm"
+
+alias ip="curl -s icanhazip.com"
