@@ -86,6 +86,7 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>e :edit %%
 map <Leader>s :split %%
 map <Leader>v :vnew %%
+map <Leader>t :tabedit %%
 
 " Remember more commands and search history
 set history=10000
@@ -169,3 +170,7 @@ hi User4 term=inverse,bold cterm=NONE ctermbg=24 ctermfg=221
 hi User5 term=inverse,bold cterm=NONE ctermbg=24 ctermfg=209
 
 nnoremap gz :!zeal --query "<cword>"&<CR><CR>
+
+au FileType javascript map <F5> :!node %<CR>
+au FileType ruby map <F5> :!ruby %<CR>
+au FileType rust map <F5> :!rustc --test % && ./%:r<CR>
