@@ -7,6 +7,10 @@ stty start undef
 export PATH="$PATH:$HOME/bin"
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
+export PATH="$HOME/.gem/ruby/2.1.0/bin:$PATH"
+export PATH="$HOME/.node/bin:$PATH"
+export PATH=$HOME/local/bin:$PATH
+export PATH=./node_modules/.bin:$PATH
 
 source ~/chruby-0.3.8/share/chruby/chruby.sh
 source ~/chruby-0.3.8/share/chruby/auto.sh
