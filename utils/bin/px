@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+px() {
+  ps uwwp ${$(pgrep -d, "${(j:|:)@}"):?no matches}
+}
