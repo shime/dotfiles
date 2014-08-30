@@ -14,6 +14,7 @@ export PATH=./node_modules/.bin:$PATH
 
 source ~/chruby-0.3.8/share/chruby/chruby.sh
 source ~/chruby-0.3.8/share/chruby/auto.sh
+chruby 2.1
 source ~/.aliases
 source ~/.functions
 source ~/.secrets
@@ -34,3 +35,4 @@ if [ -d "${PYENV_ROOT}" ]; then
   export PATH="${PYENV_ROOT}/bin:${PATH}"
   eval "$(pyenv init -)"
 fi
+export PATH=$HOME/local/bin:$PATH
