@@ -100,3 +100,6 @@
 [submodule "vim/.vim/bundle/vim-jsx"]
 	path = vim/.vim/bundle/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git
+[submodule "vim/.vim/bundle/vim-stylus"]
+	path = vim/.vim/bundle/vim-stylus
+	url = https://github.com/wavded/vim-stylus.git
