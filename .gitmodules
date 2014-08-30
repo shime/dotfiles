@@ -106,3 +106,6 @@
 [submodule "vim/.vim/bundle/tmuxline.vim"]
 	path = vim/.vim/bundle/tmuxline.vim
 	url = https://github.com/edkolev/tmuxline.vim.git
+[submodule "vim/.vim/bundle/vim-repeat"]
+	path = vim/.vim/bundle/vim-repeat
+	url = git://github.com/tpope/vim-repeat.git
