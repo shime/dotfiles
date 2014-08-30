@@ -103,3 +103,6 @@
 [submodule "vim/.vim/bundle/vim-stylus"]
 	path = vim/.vim/bundle/vim-stylus
 	url = https://github.com/wavded/vim-stylus.git
+[submodule "vim/.vim/bundle/tmuxline.vim"]
+	path = vim/.vim/bundle/tmuxline.vim
+	url = https://github.com/edkolev/tmuxline.vim.git
