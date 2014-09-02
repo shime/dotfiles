@@ -199,3 +199,6 @@ au FileType rust call RustMappings()
 au FileType javascript map <F5> :!node %<CR>
 au FileType ruby map <F5> :!ruby %<CR>
 au FileType rust map <F5> :exec "!rustc ".g:rust_command_flag." % && ./%:r"<CR>
+
+set smartindent
+set expandtab
