@@ -42,3 +42,12 @@ alias grep="grep --color"
 alias n="npm"
 
 alias ip="curl -s icanhazip.com"
+
+alias gs="git status -sb"
+alias ga="git add"
+alias gd="git diff"
+alias gcm="git commit -m"
+alias gca="git commit --amend"
+alias gco="git checkout"
+
+alias so="source"
