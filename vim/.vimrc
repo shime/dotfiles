@@ -6,7 +6,7 @@ execute pathogen#infect()
 
 " Enable syntax highlighting
 syntax on
-syntax enable 
+syntax enable
 
 " Try to set the color scheme if it's available
 set t_Co=256
@@ -22,10 +22,10 @@ set showtabline=1
 set winwidth=79
 
 " Choose no compatiblity with legacy vi
-set nocompatible                                    
+set nocompatible
 
 " 1 tab == 2 spaces
-set tabstop=2 shiftwidth=2                          
+set tabstop=2 shiftwidth=2
 
 " Super fast Ack
 map <Leader>a :Ack<CR>
@@ -55,7 +55,7 @@ function! ToggleBundler()
 endfunction
 
 " Quickly run specific test
-map <leader>rs :RSspec 
+map <leader>rs :RSspec
 
 " Source file with <leader>s
 map <leader>S :so %<CR>
@@ -92,7 +92,7 @@ map tn :tabedit %%
 set history=10000
 
 " Turbux uses 'cucumber -rfeatures' by default, override it
-let g:turbux_command_cucumber = 'cucumber -r features' 
+let g:turbux_command_cucumber = 'cucumber -r features'
 
 " Add routes to rails.vim
 command! Rroutes :RE config/routes.rb
@@ -202,3 +202,5 @@ au FileType rust map <F5> :exec "!rustc ".g:rust_command_flag." % && ./%:r"<CR>
 
 set smartindent
 set expandtab
+
+map <F2> :setlocal spell! spelllang=en_us<CR>
