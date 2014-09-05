@@ -1,0 +1,7 @@
+#! /usr/bin/env bash
+
+if [ "$1" = 'start' ]; then
+    gnome-terminal --role=irssi --hide-menubar -e "screen -S ircses irssi"
+elif [ "$1" = 'stop' ]; then
+    /usr/bin/screen -S ircses -X quit
+fi
