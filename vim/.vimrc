@@ -204,3 +204,4 @@ set smartindent
 set expandtab
 
 map <F2> :setlocal spell! spelllang=en_us<CR>
+let g:vim_markdown_folding_disabled=1
