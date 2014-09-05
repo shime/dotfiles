@@ -139,11 +139,6 @@ let g:tmuxline_separators = {
     \ 'right_alt' : '<',
     \ 'space' : ' '}
 
-" Spelling stuff
-autocmd BufRead,BufNewFile *.md setlocal spell
-autocmd BufRead,BufNewFile *.markdown setlocal spell
-autocmd FileType gitcommit setlocal spell
-
 " Add little right margin
 hi! link FoldColumn Normal
 set foldcolumn=1
@@ -196,12 +191,13 @@ let g:no_turbux_mappings = "true"
 au FileType ruby call RubyMappings()
 au FileType rust call RustMappings()
 
+" F5 runs file
 au FileType javascript map <F5> :!node %<CR>
 au FileType ruby map <F5> :!ruby %<CR>
 au FileType rust map <F5> :exec "!rustc ".g:rust_command_flag." % && ./%:r"<CR>
 
-set smartindent
-set expandtab
-
+" F2 toggles spelling
 map <F2> :setlocal spell! spelllang=en_us<CR>
+
+" prevent vim-markdown from folding stuff
 let g:vim_markdown_folding_disabled=1
