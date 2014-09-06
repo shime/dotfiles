@@ -36,6 +36,7 @@ alias gd="git diff"
 alias gca="git commit --amend"
 alias gco="git checkout"
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gu="git reset HEAD~1"
 
 function gcm(){
   git commit -m "$*"
