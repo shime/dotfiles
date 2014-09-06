@@ -1,51 +1,35 @@
+#!/usr/bin/env bash
+
+# dir stuff
 alias ..='cd ..'
 alias l='ls'
 alias lss='ls++'
-alias v='vim'
+alias ls="ls --color"
 
+# vim stuff
+alias v='vim'
 alias vimrc='vim ~/.vimrc'
 alias tmuxrc='vim ~/.tmux.conf'
 alias zshrc='vim ~/.zshrc'
 alias bashrc='vim ~/.bashrc'
 alias aliases='vim ~/.aliases'
 
-alias elasticsearch="/opt/elasticsearch-0.90.3/bin/elasticsearch"
-
-alias clone='git clone'
-
-alias close='tmux kill-session -t'
-
+# ruby stuff
 alias r="rails $*"
 alias bi="bundle install"
 alias be="bundle exec $*"
 alias rt='rake test'
 alias m="rake db:migrate"
 alias z="zeus $*"
-
 alias G="vim Gemfile"
 alias R="vim Rakefile"
 alias C="rails console"
-alias grn="grep -rn"
-alias clr="clear"
 
-alias tmux='TERM=xterm-256color tmux'
-alias ks='karma start unit-tests.conf.js --no-single-run'
+# distro stuff
 alias pacman='sudo pacman'
-alias kr='karma run'
 
-alias push="git push"
-alias pull="git pull"
-
-alias t="tmux"
-alias ls="ls --color"
-alias grep="grep --color"
-alias n="npm"
-
-alias ip="curl -s icanhazip.com"
-
-function gcm(){
-  git commit -m "$*"
-}
+# git stuff
+alias g="git"
 alias gs="git status -sb"
 alias ga="git add"
 alias gd="git diff"
@@ -53,10 +37,19 @@ alias gca="git commit --amend"
 alias gco="git checkout"
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
+function gcm(){
+  git commit -m "$*"
+}
+
+# npm stuff
+alias n="npm"
 alias ni="npm install"
 alias nis="npm install --save"
 alias nid="npm install --save-dev"
 alias ns="npm search"
 alias nd="npm docs"
 
+# misc
 alias so="source"
+alias t="tmux"
+alias ip="curl -s icanhazip.com"
