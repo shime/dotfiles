@@ -41,6 +41,10 @@ function gcm(){
   git commit -m "$*"
 }
 
+function gcam(){
+  git commit -am "$*"
+}
+
 # npm stuff
 alias n="npm"
 alias ni="npm install"
