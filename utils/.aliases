@@ -39,6 +39,7 @@ alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 alias gu="git reset HEAD~1"
 alias gss="git stash save"
 alias gsp="git stash pop"
+alias grs="git reset"
 
 function gcm(){
   git commit -m "$*"
