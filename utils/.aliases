@@ -54,6 +54,7 @@ alias ns="npm search"
 alias nd="npm docs"
 
 # misc
+alias s="sudo"
 alias so="source"
 alias t="tmux"
 alias ip="curl -s icanhazip.com"
