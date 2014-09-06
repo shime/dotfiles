@@ -20,7 +20,6 @@ alias bi="bundle install"
 alias be="bundle exec $*"
 alias rt='rake test'
 alias m="rake db:migrate"
-alias z="zeus $*"
 alias G="vim Gemfile"
 alias R="vim Rakefile"
 alias C="rails console"
