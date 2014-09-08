@@ -36,4 +36,6 @@ if [ -d "${PYENV_ROOT}" ]; then
   eval "$(pyenv init -)"
 fi
 export PATH=$HOME/local/bin:$PATH
+
 eval "$(fasd --init auto)"
+eval "$(hub alias -s)"
