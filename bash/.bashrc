@@ -28,6 +28,7 @@ export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
 export HISTSIZE=100000                   # increase size of history
 export HISTFILESIZE=100000               #
 shopt -s histappend                      # append to history, don't overwrite it
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
 export PYENV_ROOT="${HOME}/.pyenv"
 
