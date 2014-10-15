@@ -201,3 +201,11 @@ map <F2> :setlocal spell! spelllang=en_us<CR>
 
 " prevent vim-markdown from folding stuff
 let g:vim_markdown_folding_disabled=1
+
+" Tabular mappings
+if exists(":Tabularize")
+  nmap <Leader>= :Tabularize /=<CR>
+  vmap <Leader>= :Tabularize /=<CR>
+  nmap <Leader>: :Tabularize /:\zs<CR>
+  vmap <Leader>: :Tabularize /:\zs<CR>
+endif
