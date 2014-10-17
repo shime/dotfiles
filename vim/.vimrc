@@ -77,9 +77,6 @@ map <leader>N :call RenameFile()<cr>
 " Stop clearing screen when suspended
 set t_ti= t_te=
 
-" Insert a hash rocket with <c-l>
-imap <c-l> <space>=><space>
-
 " Open files in directory of current file
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
@@ -202,10 +199,7 @@ map <F2> :setlocal spell! spelllang=en_us<CR>
 " prevent vim-markdown from folding stuff
 let g:vim_markdown_folding_disabled=1
 
-" Tabular mappings
-if exists(":Tabularize")
-  nmap <Leader>= :Tabularize /=<CR>
-  vmap <Leader>= :Tabularize /=<CR>
-  nmap <Leader>: :Tabularize /:\zs<CR>
-  vmap <Leader>: :Tabularize /:\zs<CR>
-endif
+nmap <Leader>= :Tabularize /=<CR>
+vmap <Leader>= :Tabularize /=<CR>
+nmap <Leader>: :Tabularize /:\zs<CR>
+vmap <Leader>: :Tabularize /:\zs<CR>
