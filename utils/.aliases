@@ -59,5 +59,10 @@ alias nd="npm docs"
 # misc
 alias s="sudo"
 alias so="source"
-alias t="tmux"
+alias t="tmux -2"
 alias ip="curl -s icanhazip.com"
+alias dotfiles="cd ~/.dotfiles"
+
+function steal(){
+  youtube-dl --no-playlist --extract-audio --audio-format mp3 $*
+}
