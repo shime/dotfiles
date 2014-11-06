@@ -4,21 +4,9 @@
 
 # git submodule update --init           # fetches submodules
 
-[submodule "private/ssh"]
-	path = private/ssh
-	url = https://shime@bitbucket.org/shime/ssh.git
-[submodule "private/dotfiles"]
-	path = private/dotfiles
-	url = git@bitbucket.org:bsutic/private_dotfiles.git
 [submodule "vim/.vim/vundle"]
 	path = vim/.vim/vundle
 	url = https://github.com/gmarik/vundle.git
-[submodule "private/notes/Notes"]
-	path = private/notes/Notes
-	url = git@github.com:bsutic/Notes.git
-[submodule "private/notes_files/notes_files"]
-	path = private/notes_files/notes_files
-	url = git@github.com:bsutic/notes_files.git
 [submodule "zsh/.oh-my-zsh"]
 	path = zsh/.oh-my-zsh
 	url = git@github.com:shime/oh-my-zsh.git
