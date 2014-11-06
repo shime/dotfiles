@@ -95,7 +95,7 @@ install_dotfiles () {
 install_binaries(){
   # Starting directory
   root_path=$1
-  
+
   # Read line by line from /external/.binaries
   while read line; do
     # Name of the submodule
@@ -177,7 +177,7 @@ make_installation () {
 
     echo -e "\n *** Updating submodules... *** \n"
     cd $dotfile_dir
-    git submodule update --init --quiet
+    git submodule update --init
     git submodule update
 
     echo -e "\n *** Symlinking dotfiles *** \n"
