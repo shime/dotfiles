@@ -49,7 +49,6 @@ function gcam(){
 }
 
 # npm stuff
-alias n="npm"
 alias ni="npm install"
 alias nis="npm install --save"
 alias nid="npm install --save-dev"

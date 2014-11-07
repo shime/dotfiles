@@ -25,10 +25,18 @@ alias unhitch='hitch -u'
 add-alias(){
   echo "alias $@" >> ~/.aliases
   source ~/.aliases
-
 }
 
 # For showing git branch in PS1
 parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+# For creating new apps
+app-start(){
+  if [[ -z $1 ]]; then
+    echo "name the new app, pls: app-start <name>"
+  fi
+
+  git clone git@github.com:shime/app-skeleton.git $1
 }
