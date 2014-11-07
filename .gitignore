@@ -12,3 +12,4 @@ dotfiles_other/.dotfiles_other/*
 *.add.spl
 
 utils/bin/pair
+vim/.vim/bundle

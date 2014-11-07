@@ -1,0 +1,41 @@
+{
+  "name": "vim plugins",
+  "version": "0.0.0",
+  "homepage": "https://github.com/shime/dotfiles",
+  "authors": [
+    "Hrvoje Šimić <shime.ferovac@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "matchit.zip": "vim-scripts/matchit.zip#~1.13.2",
+    "tabular": "godlygeek/tabular",
+    "vim-markdown": "plasticboy/vim-markdown",
+    "vim-repeat": "tpope/vim-repeat",
+    "tmuxline.vim": "edkolev/tmuxline.vim",
+    "vim-stylus": "wavded/vim-stylus#~0.9.1",
+    "vim-jsx": "mxw/vim-jsx",
+    "vim-javascript": "pangloss/vim-javascript#~0.9.0",
+    "vim-jade": "digitaltoad/vim-jade",
+    "editorconfig-vim": "editorconfig/editorconfig-vim#~0.3.2",
+    "vim-textobj-rubyblock": "nelstrom/vim-textobj-rubyblock#~0.0.3",
+    "vim-textobj-user": "kana/vim-textobj-user#~0.6.4",
+    "vim-haml": "tpope/vim-haml",
+    "vim-coffee-script": "kchmck/vim-coffee-script",
+    "vim-handlebars": "nono/vim-handlebars",
+    "vim-unimpaired": "tpope/vim-unimpaired",
+    "html5.vim": "othree/html5.vim",
+    "vim-sparkup": "tristen/vim-sparkup",
+    "vim-surround": "tpope/vim-surround",
+    "vim-fugitive": "tpope/vim-fugitive",
+    "vim-endwise": "tpope/vim-endwise",
+    "vim-commentary": "tpope/vim-commentary",
+    "file-line": "bogado/file-line",
+    "ack.vim": "mileszs/ack.vim#~1.0.8",
+    "vim-tmux-navigator": "christoomey/vim-tmux-navigator",
+    "vim-turbux": "jgdavey/vim-turbux",
+    "vimux": "benmills/vimux#~1.0.0",
+    "vim-rails": "tpope/vim-rails",
+    "ctrlp.vim": "kien/ctrlp.vim#~1.7.7",
+    "vundle": "gmarik/vundle#~0.10.2"
+  }
+}

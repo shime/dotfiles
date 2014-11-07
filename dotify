@@ -175,22 +175,21 @@ exit 0
 # Does all the work...
 make_installation () {
 
-    echo -e "\n *** Updating submodules... *** \n"
+    echo -e "\n[dotify] Installing vim plugins...\n"
     cd $dotfile_dir
-    git submodule update --init
-    git submodule update
+    bower install
 
-    echo -e "\n *** Symlinking dotfiles *** \n"
+    echo -e "\n[dotify] Symlinking dotfiles \n"
 
     # Installs regular dotfiles
     install_dotfiles "$dotfile_dir"
 
-    echo -e "\n *** Symlinking private dotfiles *** \n"
+    echo -e "\n[dotify] Symlinking private dotfiles \n"
 
     # Installs private dotfiles
     install_dotfiles "$dotfile_dir/private"
 
-    echo -e "\n *** Symlinking external dotfiles *** \n"
+    echo -e "\n[dotify] Symlinking external dotfiles \n"
 
     # Installs binary files from other people
     install_binaries "$dotfile_dir/external"
