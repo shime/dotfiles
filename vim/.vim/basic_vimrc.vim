@@ -195,7 +195,7 @@ map <c-space> ?
 
 " Clear the search buffer when hitting return
 function! MapCR()
-  nnoremap <cr> :nohlsearch<cr>
+  nnoremap ,<cr> :nohlsearch<cr>
 endfunction
 call MapCR()
 
