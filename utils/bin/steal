@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# TODO: make this a npm module
+
+youtube-dl -f 140 --no-playlist --extract-audio --audio-format mp3 $*

@@ -62,6 +62,3 @@ alias t="tmux -2"
 alias ip="curl -s icanhazip.com"
 alias dotfiles="cd ~/.dotfiles"
 
-function steal(){
-  youtube-dl --no-playlist --extract-audio --audio-format mp3 $*
-}
