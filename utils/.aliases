@@ -61,4 +61,5 @@ alias so="source"
 alias t="tmux -2"
 alias ip="curl -s icanhazip.com"
 alias dotfiles="cd ~/.dotfiles"
-
+alias emacs="emacs -nw"
+alias pbcopy='xclip -selection clipboard'
