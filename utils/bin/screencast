@@ -2,7 +2,7 @@
 
 function run(){
   if ps ax | grep ffmpeg | grep -v grep > /dev/null; then
-    ps ax | grep ffmpeg | grep -v grep | cut -d ' ' -f 1 | xargs kill
+    killall ffmpeg
   else
     ffcast -qs rec ~/Videos/`date +%s`.gif
   fi
