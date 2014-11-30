@@ -192,6 +192,7 @@ au FileType rust call RustMappings()
 au FileType javascript map <F5> :!node %<CR>
 au FileType ruby map <F5> :!ruby %<CR>
 au FileType rust map <F5> :exec "!rustc ".g:rust_command_flag." % && ./%:r"<CR>
+au FileType python map <F5> :!python %<CR>
 
 " F2 toggles spelling
 map <F2> :setlocal spell! spelllang=en_us<CR>
