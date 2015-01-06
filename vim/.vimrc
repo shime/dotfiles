@@ -28,7 +28,7 @@ set nocompatible
 set tabstop=2 shiftwidth=2
 
 " Super fast Ack
-map <Leader>a :Ack<CR>
+noremap <Leader>a :Ag <cword><cr>
 
 " Toggle Zeus when running tests with Turbux
 nnoremap <leader>z :call ToggleZeus()<cr>
@@ -206,3 +206,16 @@ nmap <Leader>: :Tabularize /:\zs<CR>
 vmap <Leader>: :Tabularize /:\zs<CR>
 
 map gm :call LivedownPreview()<CR>
+
+" automatically removing all trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e
+
+" list chars
+set list                          " show invisible chars
+set listchars=""                  " reset the listchars
+set listchars=tab:\ \             " a tab should display as "  ", trailing whitespace as "."
+set listchars+=trail:.            " show trailing spaces as dots
+set listchars+=extends:>          " the character to show in the last column when wrap is
+                                  " off and the line continues beyond the right of the screen
+set listchars+=precedes:<         " the character to show in the last column when wrap is
+                                  " off and the line continues beyond the left of the screen
