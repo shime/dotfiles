@@ -207,8 +207,16 @@ vmap <Leader>: :Tabularize /:\zs<CR>
 
 map gm :call LivedownPreview()<CR>
 
-" automatically removing all trailing whitespace
-autocmd BufWritePre * :%s/\s\+$//e
+function! <SID>RemoveTrailingWhitespace()
+  " remove trailing whitespace, but perserve cursor position
+  let l = line('.')
+  let c = col('.')
+  %s/\s\+$//e
+  call cursor(l, c)
+endfunction
+
+" remove trailing whitespace upon saving
+autocmd BufWritePre * :call <SID>RemoveTrailingWhitespace()
 
 " list chars
 set list                          " show invisible chars
