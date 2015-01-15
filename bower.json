@@ -29,13 +29,17 @@
     "vim-endwise": "tpope/vim-endwise",
     "vim-commentary": "tpope/vim-commentary",
     "file-line": "bogado/file-line",
-    "ack.vim": "mileszs/ack.vim#~1.0.8",
     "vim-tmux-navigator": "christoomey/vim-tmux-navigator",
     "vim-turbux": "jgdavey/vim-turbux",
     "vimux": "benmills/vimux#~1.0.0",
     "vim-rails": "tpope/vim-rails",
     "ctrlp.vim": "kien/ctrlp.vim#~1.7.7",
     "vundle": "gmarik/vundle#~0.10.2",
-    "vim-livedown": "shime/vim-livedown#~1.0.2"
+    "vim-livedown": "shime/vim-livedown#~1.0.2",
+    "ack.vim": "mileszs/ack.vim#~1.0.8",
+    "ag.vim": "rking/ag.vim",
+    "writegood.vim": "davidbeckingsale/writegood.vim",
+    "vim-slim": "slim-template/vim-slim",
+    "vim-emblem": "heartsentwined/vim-emblem#~1.2.0"
   }
 }
