@@ -45,3 +45,4 @@ export PATH=$HOME/local/bin:$PATH
 
 if hash fasd 2>/dev/null; then eval "$(fasd --init auto)"; fi
 if hash hub 2>/dev/null; then eval "$(hub alias -s)"; fi
+export PATH=$HOME/local/bin:$PATH
