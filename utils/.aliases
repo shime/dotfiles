@@ -48,6 +48,12 @@ function gcam(){
   git commit -am "$*"
 }
 
+function release(){
+  version=$1
+  git commit -m "release $version"
+  git tag -a "$version" -m "$version" || git reset HEAD~1
+}
+
 # npm stuff
 alias ni="npm install"
 alias nis="npm install --save"
@@ -63,3 +69,4 @@ alias ip="curl -s icanhazip.com"
 alias dotfiles="cd ~/.dotfiles"
 alias emacs="emacs -nw"
 alias pbcopy='xclip -selection clipboard'
+alias mkdir="mkdir -p"
