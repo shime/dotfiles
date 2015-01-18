@@ -31,8 +31,11 @@ nmap <leader>V :tabedit $MYVIMRC<CR>
 " Source current buffer with <leader>S
 map <leader>S :so %<CR>
 
-" Use ag for searches
+" Search for word under cursor with ag
 noremap <Leader>a :Ag <cword><cr>
+
+" Search visual selection with ag
+vnoremap <Leader>a y:Ack <C-r>=fnameescape(@")<CR><CR>
 
 " Open quickfix at the bottom of the screen
 map <leader>cc :botright cope<cr>

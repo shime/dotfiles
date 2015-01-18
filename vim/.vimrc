@@ -46,6 +46,9 @@ let g:tmuxline_separators = {
 " Prevent vim-markdown from folding stuff
 let g:vim_markdown_folding_disabled=1
 
+" Tell ag.vim to stop using regex search
+let g:ackprg = 'ag --nogroup --nocolor --column --literal'
+
 " Tabularize mappings
 nmap <Leader>= :Tabularize /=<CR>
 vmap <Leader>= :Tabularize /=<CR>
