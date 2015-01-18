@@ -22,7 +22,8 @@ execute pathogen#infect()
 call pathogen#helptags()
 
 " Set CTRL-P to ignore anything matching this regex
-let g:ctrlp_custom_ignore = 'app\/assets\/javascripts\/node_modules\|DS_Store\|\.git\|tmp\|node_modules'
+let g:ctrlp_custom_ignore =
+      \'app\/assets\/javascripts\/node_modules\|DS_Store\|\.git\|tmp\|node_modules'
 " Set CTRL-P to lookup files based on regex, instead of basename only
 let g:ctrlp_regexp = 1
 " Set CTRL-P working directory to the first ancestor directory that contains .git/
@@ -39,35 +40,6 @@ let g:tmuxline_separators = {
     \ 'right' : '',
     \ 'right_alt' : '<',
     \ 'space' : ' '}
-
-function! RubyMappings()
-  map <leader>t <Plug>SendTestToTmux
-  map <leader>T <Plug>SendFocusedTestToTmux
-endfunction
-
-function! RustMappings()
-  nnoremap <leader>t :call ToggleTestModeRust()<cr>
-  let g:rust_command_flag = ''
-endfunction
-
-function! ToggleTestModeRust()
-  if g:rust_command_flag == '--test'
-    echo 'testing disabled'
-    let g:rust_command_flag = ''
-  else
-    echo 'testing enabled'
-    let g:rust_command_flag = '--test'
-  endif
-endfunction
-
-au FileType ruby call RubyMappings()
-au FileType rust call RustMappings()
-
-" F5 runs file
-au FileType javascript map <F5> :!node %<CR>
-au FileType ruby map <F5> :!ruby %<CR>
-au FileType rust map <F5> :exec "!rustc ".g:rust_command_flag." % && ./%:r"<CR>
-au FileType python map <F5> :!python %<CR>
 
 " prevent vim-markdown from folding stuff
 let g:vim_markdown_folding_disabled=1
