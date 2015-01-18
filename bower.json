@@ -36,7 +36,6 @@
     "ctrlp.vim": "kien/ctrlp.vim#~1.7.7",
     "vundle": "gmarik/vundle#~0.10.2",
     "vim-livedown": "shime/vim-livedown#~1.0.2",
-    "ack.vim": "mileszs/ack.vim#~1.0.8",
     "ag.vim": "rking/ag.vim",
     "writegood.vim": "davidbeckingsale/writegood.vim",
     "vim-slim": "slim-template/vim-slim",
