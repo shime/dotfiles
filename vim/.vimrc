@@ -6,6 +6,7 @@
 " Organization:
 "    * ~/.vim/settings.vim            - settings
 "    * ~/.vim/mappings.vim            - mappings
+"    * ~/.vim/autocommands.vim        - auto commands
 "    * ~/.vim/local/<plugin_name>.vim - settings and mappings for
 "                                       specific plugin
 "
@@ -13,6 +14,7 @@
 " Import settings and mappings
 source ~/.vim/settings.vim
 source ~/.vim/mappings.vim
+source ~/.vim/autocommands.vim
 
 " Load plugin specific configurations from ~/.vim/local
 source ~/.vim/local/turbux.vim
@@ -52,13 +54,3 @@ vmap <Leader>: :Tabularize /:\zs<CR>
 
 " Press gm to preview markdown file
 map gm :call LivedownPreview()<CR>
-
-" Removes trailing whitespace, but perserves cursor position
-function! RemoveTrailingWhitespace()
-  exe "normal mz"
-  %s/\s\+$//ge
-  exe "normal `z"
-endfunction
-
-" Call trailing whitespace removal when saving
-autocmd BufWrite * :call RemoveTrailingWhitespace()
