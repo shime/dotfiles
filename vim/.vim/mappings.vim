@@ -15,9 +15,6 @@ imap <C-S> <Esc>:w<CR>
 " Reload with ctrl+e
 map <C-e> :e!<CR>
 
-" :W sudo saves the file
-command! W w !sudo tee % > /dev/null
-
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
 map k gk
@@ -66,18 +63,6 @@ map <Leader>s :split %%
 map <Leader>v :vnew %%
 " Opens a new tab in the current directory
 map <leader>te :tabedit %%
-
-" Rename file with <leader>N
-function! RenameFile()
-    let old_name = expand('%')
-    let new_name = input('New file name: ', expand('%'), 'file')
-    if new_name != '' && new_name != old_name
-        exec ':saveas ' . new_name
-        exec ':silent !rm ' . old_name
-        exec ':edit ' . new_name
-    endif
-endfunction
-map <leader>N :call RenameFile()<cr>
 
 " Open files in directory of current file
 cnoremap %% <C-R>=expand('%:h').'/'<cr>

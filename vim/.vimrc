@@ -60,3 +60,10 @@ endif
 if exists("*LivedownPreview")
   map gm :call LivedownPreview()<CR>
 endif
+
+" Eunuch mappings
+map <leader>m :Move
+cnoreabbrev W SudoWrite
+cnoreabbrev rm Remove
+cnoreabbrev mkdir Mkdir
+cnoreabbrev chmod Chmod
