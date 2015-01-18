@@ -50,10 +50,14 @@ let g:vim_markdown_folding_disabled=1
 let g:ackprg = 'ag --nogroup --nocolor --column --literal'
 
 " Tabularize mappings
-nmap <Leader>= :Tabularize /=<CR>
-vmap <Leader>= :Tabularize /=<CR>
-nmap <Leader>: :Tabularize /:\zs<CR>
-vmap <Leader>: :Tabularize /:\zs<CR>
+if exists(":Tabularize")
+  nmap <Leader>= :Tabularize /=<CR>
+  vmap <Leader>= :Tabularize /=<CR>
+  nmap <Leader>: :Tabularize /:\zs<CR>
+  vmap <Leader>: :Tabularize /:\zs<CR>
+endif
 
 " Press gm to preview markdown file
-map gm :call LivedownPreview()<CR>
+if exists("*LivedownPreview")
+  map gm :call LivedownPreview()<CR>
+endif
