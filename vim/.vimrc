@@ -24,8 +24,7 @@ execute pathogen#infect()
 call pathogen#helptags()
 
 " Set CTRL-P to ignore anything matching this regex
-let g:ctrlp_custom_ignore =
-      \'app\/assets\/javascripts\/node_modules\|DS_Store\|\.git\|tmp\|node_modules'
+let g:ctrlp_custom_ignore = 'DS_Store\|tmp\|node_modules'
 " Set CTRL-P to lookup files based on regex, instead of basename only
 let g:ctrlp_regexp = 1
 " Set CTRL-P working directory to the first ancestor directory that contains .git/
