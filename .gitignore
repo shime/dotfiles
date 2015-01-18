@@ -13,3 +13,4 @@ dotfiles_other/.dotfiles_other/*
 
 utils/bin/pair
 vim/.vim/bundle
+vim/.vim/spell
