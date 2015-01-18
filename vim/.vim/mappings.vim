@@ -51,6 +51,9 @@ function! OpenURL(url)
 endfunction
 command! -nargs=1 OpenURL :call OpenURL(<q-args>)
 
+" Make C-a work in command line mode (to match C-e)
+cnoremap <C-a> <Home>
+
 " Copying and pasting
 " ===================
 "
