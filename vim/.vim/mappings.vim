@@ -43,6 +43,14 @@ map <leader>cq :ccl<cr>
 " Toggle between last open buffers
 nnoremap <leader><leader> <c-^>
 
+" Open repo/user URLS on github
+nnoremap gX :OpenURL http://github.com/<cfile><CR>
+function! OpenURL(url)
+ exe "!xdg-open \"".a:url."\""
+ redraw!
+endfunction
+command! -nargs=1 OpenURL :call OpenURL(<q-args>)
+
 " Copying and pasting
 " ===================
 "
@@ -51,8 +59,8 @@ nnoremap <leader>y "+y
 vnoremap <leader>y "+y
 
 " Paste from + register with <leader>p and fix indentation
-nnoremap <leader>p pV`]=
-vnoremap <leader>p PV`]=
+nnoremap <leader>p "+pV`]=
+vnoremap <leader>p "+PV`]=
 
 " Delete into + register with <leader>p
 nnoremap <leader>d "+d
