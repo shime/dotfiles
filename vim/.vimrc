@@ -43,7 +43,7 @@ let g:tmuxline_separators = {
     \ 'right_alt' : '<',
     \ 'space' : ' '}
 
-" prevent vim-markdown from folding stuff
+" Prevent vim-markdown from folding stuff
 let g:vim_markdown_folding_disabled=1
 
 " Tabularize mappings
