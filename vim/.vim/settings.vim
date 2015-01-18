@@ -87,6 +87,11 @@ endtry
 hi! link FoldColumn Normal
 set foldcolumn=1
 
+" Delete comment char when joining commented lines
+if v:version > 703 || v:version == 703 && has("patch541")
+  set formatoptions+=j
+endif
+
 " Search
 " ======
 "
