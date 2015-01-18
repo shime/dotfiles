@@ -37,6 +37,12 @@ vnoremap <Leader>a y:Ack <C-r>=fnameescape(@")<CR><CR>
 " Open quickfix at the bottom of the screen
 map <leader>cc :botright cope<cr>
 
+" Close quickfix
+map <leader>cq :ccl<cr>
+
+" Toggle between last open buffers
+nnoremap <leader><leader> <c-^>
+
 " Copying and pasting
 " ===================
 "
@@ -44,9 +50,9 @@ map <leader>cc :botright cope<cr>
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
 
-" Paste from + register with <leader>p
-nnoremap <leader>p "+p
-vnoremap <leader>p "+p
+" Paste from + register with <leader>p and fix indentation
+nnoremap <leader>p pV`]=
+vnoremap <leader>p PV`]=
 
 " Delete into + register with <leader>p
 nnoremap <leader>d "+d
