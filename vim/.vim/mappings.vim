@@ -163,10 +163,6 @@ endfunction
 " Pressing ,ss will toggle and untoggle spell checking
 map <leader>ss :setlocal spell!<cr>
 
-" Next spelling error
-map <leader>sn ]s
-" Previous spelling error
-map <leader>sp [s
 " Add word under cursor to dictionary
 map <leader>sa zg
 " List spelling suggestions
