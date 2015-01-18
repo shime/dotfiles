@@ -25,8 +25,10 @@ call pathogen#helptags()
 
 " Set CTRL-P to ignore anything matching this regex
 let g:ctrlp_custom_ignore = 'DS_Store\|tmp\|node_modules'
+
 " Set CTRL-P to lookup files based on regex, instead of basename only
 let g:ctrlp_regexp = 1
+
 " Set CTRL-P working directory to the first ancestor directory that contains .git/
 let g:ctrlp_working_path_mode = 2
 
