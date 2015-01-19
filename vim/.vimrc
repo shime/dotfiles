@@ -59,9 +59,7 @@ if exists(":Tabularize")
 endif
 
 " Press gm to preview markdown file
-if exists("*LivedownPreview")
-  map gm :call LivedownPreview()<CR>
-endif
+map gm :call LivedownPreview()<CR>
 
 " Eunuch mappings
 map <leader>m :Move
