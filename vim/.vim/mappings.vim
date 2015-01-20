@@ -54,6 +54,10 @@ command! -nargs=1 OpenURL :call OpenURL(<q-args>)
 " Make C-a work in command line mode (to match C-e)
 cnoremap <C-a> <Home>
 
+" Navigate previous/next command with <C-j> and <C-k> in cmd line
+cmap <C-k> <Up>
+cmap <C-j> <Down>
+
 " Copying and pasting
 " ===================
 "
@@ -182,5 +186,6 @@ map <leader>ss :setlocal spell!<cr>
 
 " Add word under cursor to dictionary
 map <leader>sa zg
+
 " List spelling suggestions
 map <leader>s? z=
