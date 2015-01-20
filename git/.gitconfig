@@ -23,3 +23,5 @@
 	style = vim
 [ghi]
 	editor = vim
+[rebase]
+  autosquash = true
