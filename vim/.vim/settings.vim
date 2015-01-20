@@ -28,9 +28,7 @@ syntax enable
 
 " Set color scheme
 set t_Co=256
-set background=dark
-let g:solarized_termcolors=256
-colorscheme grb256
+colorscheme molokai
 
 " Set to auto read when a file is changed from the outside
 set autoread
