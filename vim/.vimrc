@@ -11,6 +11,10 @@
 "                                       specific plugin
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable Pathogen
+execute pathogen#infect()
+call pathogen#helptags()
+
 " Import settings and mappings
 source ~/.vim/settings.vim
 source ~/.vim/mappings.vim
@@ -18,10 +22,6 @@ source ~/.vim/autocommands.vim
 
 " Load plugin specific configurations from ~/.vim/local
 source ~/.vim/local/turbux.vim
-
-" Enable Pathogen
-execute pathogen#infect()
-call pathogen#helptags()
 
 " Set CTRL-P to ignore anything matching this regex
 let g:ctrlp_custom_ignore = 'DS_Store\|tmp\|node_modules'
@@ -32,9 +32,15 @@ let g:ctrlp_regexp = 1
 " Set CTRL-P working directory to the first ancestor directory that contains .git/
 let g:ctrlp_working_path_mode = 2
 
-" Airline configuration
-let g:airline_theme='jellybeans'
+" " Airline configuration
+let g:airline_theme='serene'
 let g:airline_detect_whitespace=0
+let g:airline_section_a="%f%m"
+let g:airline_section_b="%y"
+let g:airline_section_c="%{airline#util#wrap(airline#extensions#branch#get_head(),0)}"
+let g:airline_section_x=""
+let g:airline_section_y=""
+let g:airline_section_z="%l/%L[%p%%]"
 
 " Tmuxline configuration
 let g:tmuxline_separators = {
@@ -62,8 +68,10 @@ endif
 map gm :call LivedownPreview()<CR>
 
 " Eunuch mappings
-map <leader>m :Move
-cnoreabbrev W SudoWrite
-cnoreabbrev rm Remove
-cnoreabbrev mkdir Mkdir
-cnoreabbrev chmod Chmod
+map <leader>m :Move %%
+
+" Eunuch abbreviations
+cab W SudoWrite
+cab rm Remove "%"
+cab mkdir Mkdir %%
+cab chmod Chmod %

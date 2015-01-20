@@ -40,6 +40,8 @@
     "writegood.vim": "davidbeckingsale/writegood.vim",
     "vim-slim": "slim-template/vim-slim",
     "vim-emblem": "heartsentwined/vim-emblem#~1.2.0",
-    "vim-eunuch": "tpope/vim-eunuch"
+    "vim-eunuch": "tpope/vim-eunuch",
+    "molokai": "tomasr/molokai",
+    "vim-airline": "bling/vim-airline"
   }
 }
