@@ -11,6 +11,9 @@
 "                                       specific plugin
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Better colors for Molokai
+let g:rehash256 = 1
+
 " Enable Pathogen
 execute pathogen#infect()
 call pathogen#helptags()
@@ -72,4 +75,4 @@ map <leader>m :Move %%
 cab W SudoWrite
 cab rm Remove "%"
 cab mkdir Mkdir %%
-cab chmod Chmod %
+cab xxx Chmod +x
