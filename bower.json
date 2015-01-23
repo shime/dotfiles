@@ -41,7 +41,7 @@
     "vim-slim": "slim-template/vim-slim",
     "vim-emblem": "heartsentwined/vim-emblem#~1.2.0",
     "vim-eunuch": "tpope/vim-eunuch",
-    "molokai": "tomasr/molokai",
-    "vim-airline": "bling/vim-airline"
+    "vim-airline": "bling/vim-airline",
+    "molokai": "shime/molokai"
   }
 }
