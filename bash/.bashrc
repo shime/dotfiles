@@ -12,13 +12,13 @@ export PATH="$HOME/.node/bin:$PATH"
 export PATH=$HOME/local/bin:$PATH
 export PATH=./node_modules/.bin:$PATH
 
-source ~/chruby-0.3.8/share/chruby/chruby.sh
+source ~/chruby-0.3.9/share/chruby/chruby.sh
 
 if hash chruby 2>/dev/null;then
-  chruby 2.1
+  chruby 2.2
 fi
 
-source ~/chruby-0.3.8/share/chruby/auto.sh
+source ~/chruby-0.3.9/share/chruby/auto.sh
 
 source ~/.aliases
 source ~/.functions
@@ -41,8 +41,5 @@ if [ -d "${PYENV_ROOT}" ]; then
   export PATH="${PYENV_ROOT}/bin:${PATH}"
   eval "$(pyenv init -)"
 fi
-export PATH=$HOME/local/bin:$PATH
 
-if hash fasd 2>/dev/null; then eval "$(fasd --init auto)"; fi
-if hash hub 2>/dev/null; then eval "$(hub alias -s)"; fi
 export PATH=$HOME/local/bin:$PATH
