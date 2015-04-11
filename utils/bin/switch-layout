@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+if setxkbmap -query | grep layout | grep us > /dev/null; then
+  setxkbmap -option ctrl:nocaps hr
+else
+  setxkbmap -option ctrl:nocaps us
+fi
