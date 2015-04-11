@@ -9,8 +9,8 @@ map <C-Q> :qa!<CR>
 imap <C-Q> <Esc>:qa!<CR>
 
 " Saving with ctrl+s
-map <C-S> :w<CR>
-imap <C-S> <Esc>:w<CR>
+map <C-S> :wa<CR>
+imap <C-S> <Esc>:wa<CR>
 
 " Reload with ctrl+e
 map <C-e> :e!<CR>
@@ -38,7 +38,7 @@ vnoremap <Leader>a y:Ack <C-r>=fnameescape(@")<CR><CR>
 map <leader>cc :botright cope<cr>
 
 " Close quickfix
-map <leader>cq :ccl<cr>
+map <leader>qq :ccl<cr>
 
 " Toggle between last open buffers
 nnoremap <leader><leader> <c-^>

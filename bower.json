@@ -42,6 +42,7 @@
     "vim-emblem": "heartsentwined/vim-emblem#~1.2.0",
     "vim-eunuch": "tpope/vim-eunuch",
     "vim-airline": "bling/vim-airline",
-    "molokai": "shime/molokai"
+    "molokai": "shime/molokai",
+    "loremipsum": "vim-scripts/loremipsum"
   }
 }

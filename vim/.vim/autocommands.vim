@@ -1,5 +1,5 @@
 " Remove trailing whitespace on save
-autocmd BufWrite * :call RemoveTrailingWhitespace()
+" autocmd BufWrite * :call RemoveTrailingWhitespace()
 
 " Return to last edit position when opening files
 autocmd BufReadPost *

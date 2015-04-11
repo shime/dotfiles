@@ -43,3 +43,6 @@ if [ -d "${PYENV_ROOT}" ]; then
 fi
 
 export PATH=$HOME/local/bin:$PATH
+
+source ~/git-super-status/init.sh
+export PATH=$HOME/local/bin:$PATH

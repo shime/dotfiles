@@ -72,7 +72,7 @@ map gm :call LivedownPreview()<CR>
 map <leader>m :Move %%
 
 " Eunuch abbreviations
-cab W SudoWrite
-cab rm Remove "%"
-cab mkdir Mkdir %%
-cab xxx Chmod +x
+" cab W SudoWrite
+" cab rm Remove "%"
+" cab mkdir Mkdir %%
+" cab xxx Chmod +x
