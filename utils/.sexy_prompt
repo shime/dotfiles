@@ -63,8 +63,6 @@ parse_git_branch () {
 function is_on_git() {
   git rev-parse 2> /dev/null
 }
- 
-PS1="\[${BOLD}${CYAN}\]\u \
-\[$BASE0\]at \[$CYAN\]\h \
-\[$BASE0\]in \[$BLUE\]\w \
-\[$BASE0\]\$( is_on_git && echo \"on \")\[$YELLOW\]\$(parse_git_branch)\[$BASE0\]\n\$ \[$RESET\]"
+
+PS1="\[$BLUE\]\w \
+\[$BASE0\]\$( is_on_git && echo \"\")\[$YELLOW\]\$(parse_git_branch)\[$BASE0\]\n\$ \[$RESET\]"
