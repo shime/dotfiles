@@ -1,0 +1,41 @@
+#!/bin/bash
+
+DEVICES=$(find /sys/class/drm/*/status)
+displaynum=`ls /tmp/.X11-unix/* | sed s#/tmp/.X11-unix/X##`
+display=":$displaynum"
+export DISPLAY=":$displaynum"
+
+while read l 
+do 
+  dir=$(dirname $l); 
+  status=$(cat $l); 
+  dev=$(echo $dir | cut -d\- -f 2-); 
+
+  if [ $(expr match  $dev "HDMI") != "0" ]
+  then
+    dev=HDMI${dev#HDMI-?-}
+  else 
+    dev=$(echo $dev | tr -d '-')
+  fi
+
+  if [ "connected" == "$status" ]
+  then 
+    echo $dev "connected" >> /var/log/monitor-hotplug.log
+    declare $dev="yes"; 
+
+  fi
+done <<< "$DEVICES"
+
+
+if [ ! -z "$HDMI1" ]
+then
+  echo "HDMI1 plugged in" >> /var/log/monitor-hotplug.log
+
+  xrandr --output LVDS1 --off
+  xrandr --output HDMI1 --mode 1920x1080 --primary
+else
+  echo "HDMI1 plugged out" >> /var/log/monitor-hotplug.log
+
+  xrandr --output HDMI1 --off
+  xrandr --output LVDS1 --mode 1920x1080 --primary
+fi
