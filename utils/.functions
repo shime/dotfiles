@@ -9,11 +9,6 @@ nuke(){
   kill -9 `pgrep $*`
 }
 
-# Shutdown 1 hour from now
-sdn(){
-  sudo shutdown -h `date --date="next hour" +"%H:%M"`
-}
-
 # Making git play nicely when pairing.
 hitch() {
   command hitch "$@"
