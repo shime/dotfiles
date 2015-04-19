@@ -1,0 +1,43 @@
+# GNOME PolicyKit and Keyring
+eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
+
+# set root window colour
+hsetroot -solid "#2E3436" &
+
+# nitrogen - restores wallpaper
+nitrogen --restore &
+tint2 &
+
+# enable power management
+(sleep 2s && xfce4-power-manager) &
+
+# start Thunar Daemon
+thunar --daemon &
+
+# detect and configure touchpad. See 'man synclient' for more info.
+if egrep -iq 'touchpad' /proc/bus/input/devices; then
+  synclient VertEdgeScroll=1 &
+  synclient TapButton1=1 &
+  synclient PalmDetect=1 &
+fi
+
+# start xscreensaver
+xscreensaver -no-splash &
+
+# set keyboard settings - 250 ms delay and 25 cps (characters per second) repeat rate.
+xset r rate 250 25 &
+
+# turn on/off system beep
+xset b off &
+
+# make caps lock another control
+setxkbmap -option ctrl:nocaps
+
+# enable redshift
+redshift -t 5800:4500 &
+
+# volume icon
+volumeicon &
+
+# make sure screen doesn't go to sleep while watching videos
+/home/hrvoje/bin/lights-on &
