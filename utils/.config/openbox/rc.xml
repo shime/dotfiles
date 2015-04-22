@@ -179,6 +179,11 @@
     <!-- 'Left', 'Middle', 'Right' -->
   </dock>
   <keyboard>
+    <keybind key="A-F10">
+      <action name="Execute">
+        <command>/home/hrvoje/bin/shrug-shoulders</command>
+      </action>
+    </keybind>
     <keybind key="A-F11">
       <action name="Execute">
         <command>/home/hrvoje/bin/switch-layout</command>
