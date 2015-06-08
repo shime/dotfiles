@@ -71,8 +71,21 @@ map gm :call LivedownPreview()<CR>
 " Eunuch mappings
 map <leader>m :Move %%
 
-" Eunuch abbreviations
-" cab W SudoWrite
-" cab rm Remove "%"
-" cab mkdir Mkdir %%
-" cab xxx Chmod +x
+
+" Used for project-wide search and replace with
+"
+" Qargs | argdo %s/findme/replacement/gc | update
+"
+" Hat tip to Drew Neil
+" http://stackoverflow.com/a/5686810/726020
+command! -nargs=0 -bar Qargs execute 'args ' . QuickfixFilenames()
+function! QuickfixFilenames()
+  " Building a hash ensures we get each buffer only once
+  let buffer_numbers = {}
+  for quickfix_item in getqflist()
+    let buffer_numbers[quickfix_item['bufnr']] = bufname(quickfix_item['bufnr'])
+  endfor
+  return join(values(buffer_numbers))
+endfunction
+
+cabbrev ag Ag
