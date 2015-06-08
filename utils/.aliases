@@ -40,6 +40,8 @@ alias gss="git stash save"
 alias gsp="git stash pop"
 alias grs="git reset"
 alias gcfd="git clean -fd"
+alias gbv="git branch -v"
+alias gdc="git diff -w --cached"
 
 function gcm(){
   git commit -m "$*"
@@ -75,3 +77,5 @@ alias reload="exec bash -l"
 alias open="xdg-open"
 
 alias em="ember"
+
+alias vmig="vim $(git status -s db | cut -d ' ' -f 2)"
