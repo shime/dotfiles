@@ -7,12 +7,12 @@ alias lss='ls++'
 alias ls="ls --color"
 
 # vim stuff
-alias v='vim'
-alias vimrc='vim ~/.vimrc'
-alias tmuxrc='vim ~/.tmux.conf'
-alias zshrc='vim ~/.zshrc'
-alias bashrc='vim ~/.bashrc'
-alias aliases='vim ~/.aliases'
+alias v='vim --remote-silent'
+alias vimrc='v ~/.vimrc'
+alias tmuxrc='v ~/.tmux.conf'
+alias zshrc='v ~/.zshrc'
+alias bashrc='v ~/.bashrc'
+alias aliases='v ~/.aliases'
 
 # ruby stuff
 alias r="rails $*"
@@ -20,8 +20,8 @@ alias bi="bundle install"
 alias be="bundle exec $*"
 alias rt='rake test'
 alias m="rake db:migrate"
-alias G="vim Gemfile"
-alias R="vim Rakefile"
+alias G="v Gemfile"
+alias R="v Rakefile"
 alias C="rails console"
 
 # distro stuff
@@ -78,4 +78,4 @@ alias open="xdg-open"
 
 alias em="ember"
 
-alias vmig="vim $(git status -s db | cut -d ' ' -f 2)"
+alias vmig="v $(git status -s db | cut -d ' ' -f 2)"
