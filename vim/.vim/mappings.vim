@@ -32,7 +32,7 @@ map <leader>S :so %<CR>
 noremap <Leader>a :Ag <cword><cr>
 
 " Search visual selection with ag
-vnoremap <Leader>a y:Ack <C-r>=fnameescape(@")<CR><CR>
+vnoremap <Leader>a y:Ag <C-r>=fnameescape(@")<CR><CR>
 
 " Open quickfix at the bottom of the screen
 map <leader>cc :botright cope<cr>
@@ -189,3 +189,9 @@ map <leader>sa zg
 
 " List spelling suggestions
 map <leader>s? z=
+
+" Git
+" ========
+"
+" Add to index with ,ga
+map <leader>ga :silent !git add % &<cr><cr>
