@@ -9,7 +9,6 @@
   "dependencies": {
     "matchit.zip": "vim-scripts/matchit.zip#~1.13.2",
     "tabular": "godlygeek/tabular",
-    "vim-markdown": "plasticboy/vim-markdown",
     "vim-repeat": "tpope/vim-repeat",
     "tmuxline.vim": "edkolev/tmuxline.vim",
     "vim-stylus": "wavded/vim-stylus#~0.9.1",
