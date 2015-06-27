@@ -75,12 +75,6 @@ set tm=500
 " Remember info about open buffers on close
 set viminfo^=%
 
-" Specify the behavior when switching between buffers
-try
-  set switchbuf=useopen,usetab,newtab
-catch
-endtry
-
 " Set left margin
 hi! link FoldColumn Normal
 set foldcolumn=1
