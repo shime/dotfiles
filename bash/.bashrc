@@ -43,3 +43,4 @@ if [ -d "${PYENV_ROOT}" ]; then
 fi
 
 export PATH=$HOME/local/bin:$PATH
+export EDITOR=nvim
