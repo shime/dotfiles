@@ -12,5 +12,15 @@ dotfiles_other/.dotfiles_other/*
 *.add.spl
 
 utils/bin/pair
+
+utils/.config/google-chrome
+utils/.config/Trolltech.conf
+utils/.config/dconf
+utils/.config/totem
+utils/.config/unity
+utils/.config/vlc
+utils/.config/compiz-1
+utils/.config/mimeapps.list
+
 vim/.vim/bundle
 vim/.vim/spell
