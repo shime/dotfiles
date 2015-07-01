@@ -355,15 +355,6 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Run Program</name>
-        </startupnotify>
-        <command>gmrun</command>
-      </action>
-    </keybind>
-    <keybind key="A-F3">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
           <name>dmenu-bind</name>
         </startupnotify>
         <command>~/.config/dmenu/dmenu-bind.sh</command>
