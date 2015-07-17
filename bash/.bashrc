@@ -29,11 +29,11 @@ source ~/.opinions
 source ~/.sexy_prompt
 
 # History related
-export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
-export HISTSIZE=""                   # increase size of history
-export HISTFILESIZE=""               #
-shopt -s histappend                      # append to history, don't overwrite it
-export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+export HISTSIZE=-1
+export HISTFILESIZE=-1
+export HISTCONTROL=ignoredups:erasedups
+shopt -s histappend
+export PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMPT_COMMAND"
 
 export PYENV_ROOT="${HOME}/.pyenv"
 
