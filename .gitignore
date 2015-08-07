@@ -15,3 +15,5 @@ utils/bin/pair
 
 vim/.vim/bundle
 vim/.vim/spell
+
+utils/.config/configstore
