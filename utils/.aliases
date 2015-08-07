@@ -4,7 +4,6 @@
 alias ..='cd ..'
 alias l='ls'
 alias lss='ls++'
-alias ls="ls --color"
 
 # vim stuff
 alias e='nvim'
