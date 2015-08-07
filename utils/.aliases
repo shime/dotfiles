@@ -6,7 +6,7 @@ alias l='ls'
 alias lss='ls++'
 
 # vim stuff
-alias e='nvim'
+alias e='vim'
 alias vimrc='e ~/.vimrc'
 alias tmuxrc='e ~/.tmux.conf'
 alias zshrc='e ~/.zshrc'
