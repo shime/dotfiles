@@ -19,7 +19,6 @@ if hash chruby 2>/dev/null;then
   chruby 2.2
 fi
 
-
 source ~/.aliases
 source ~/.functions
 if [ -f ~/.secrets ]; then
@@ -27,13 +26,6 @@ if [ -f ~/.secrets ]; then
 fi
 source ~/.opinions
 source ~/.sexy_prompt
-
-# History related
-export HISTSIZE=-1
-export HISTFILESIZE=-1
-export HISTCONTROL=ignoredups:erasedups
-shopt -s histappend
-export PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMPT_COMMAND"
 
 export PYENV_ROOT="${HOME}/.pyenv"
 
@@ -44,3 +36,8 @@ fi
 
 export PATH=$HOME/local/bin:$PATH
 export EDITOR=nvim
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+
+# Prettier `ls` colors
+export CLICOLOR=1
+export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
