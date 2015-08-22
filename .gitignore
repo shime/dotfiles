@@ -17,3 +17,4 @@ vim/.vim/bundle
 vim/.vim/spell
 
 utils/.config/configstore
+utils/.config/gtk-2.0
