@@ -13,11 +13,12 @@ export PATH=$HOME/local/bin:$PATH
 export PATH=./node_modules/.bin:$PATH
 
 source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
 
 if hash chruby 2>/dev/null;then
-  chruby 2.2
+  chruby 2.2.0
 fi
+
+source /usr/local/opt/chruby/share/chruby/auto.sh
 
 source ~/.aliases
 source ~/.functions
