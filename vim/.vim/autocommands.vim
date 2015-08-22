@@ -20,3 +20,5 @@ au InsertLeave * :set listchars+=trail:⋅
 
 " Treat .js.es6 files as JavaScript
 au BufNewFile,BufRead *.js.es6 setf javascript
+
+au FileType gitcommit set tw=70
