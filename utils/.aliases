@@ -70,9 +70,7 @@ alias t="tmux -2"
 alias myip="curl -s icanhazip.com"
 alias dotfiles="cd ~/.dotfiles"
 alias emacs="emacs -nw"
-alias pbcopy='xclip -selection clipboard'
 alias mkdir="mkdir -p"
 alias reload="exec bash -l"
-alias open="xdg-open"
 
 alias em="ember"
