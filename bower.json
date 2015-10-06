@@ -41,6 +41,7 @@
     "vim-eunuch": "tpope/vim-eunuch",
     "vim-airline": "bling/vim-airline",
     "molokai": "shime/molokai",
-    "loremipsum": "vim-scripts/loremipsum"
+    "loremipsum": "vim-scripts/loremipsum",
+    "vim-pathogen": "tpope/vim-pathogen"
   }
 }
