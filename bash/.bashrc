@@ -42,3 +42,6 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 # Prettier `ls` colors
 export CLICOLOR=1
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
+
+export NVM_DIR="/Users/hrvoje/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
