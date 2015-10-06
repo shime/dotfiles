@@ -1,14 +1,12 @@
 [user]
 	name = Hrvoje Šimić
-	email = me@shime.io
+	email = shime@twobucks.co
 [credential]
 	helper = cache
 [pull]
 	rebase = true
 [github]
 	user = shime
-[web]
-	browser = firefox
 [push]
 	default = current
 [color]
@@ -25,3 +23,17 @@
 	editor = vim
 [rebase]
   autosquash = true
+
+[alias]
+  a  = add
+  c  = commit
+  ca = commit --amend
+  co = checkout
+  d  = diff -w
+  dc = diff -w --cached
+  l  = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  rs = reset
+  s  = status -sb
+  ss = stash save
+  sp = stash pop
+  u  = reset HEAD~1

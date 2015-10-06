@@ -12,6 +12,7 @@ alias tmuxrc='e ~/.tmux.conf'
 alias zshrc='e ~/.zshrc'
 alias bashrc='e ~/.bashrc'
 alias aliases='e ~/.aliases'
+alias vi='nvim'
 
 # ruby stuff
 alias r="rails $*"
@@ -22,25 +23,6 @@ alias m="rake db:migrate"
 alias G="e Gemfile"
 alias R="e Rakefile"
 alias C="rails console"
-
-# distro stuff
-alias pacman='sudo pacman'
-
-# git stuff
-alias g="git"
-alias gs="git status -sb"
-alias ga="git add"
-alias gd="git diff -w"
-alias gca="git commit --amend"
-alias gco="git checkout"
-alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias gu="git reset HEAD~1"
-alias gss="git stash save"
-alias gsp="git stash pop"
-alias grs="git reset"
-alias gcfd="git clean -fd"
-alias gbv="git branch -v"
-alias gdc="git diff -w --cached"
 
 function gcm(){
   git commit -m "$*"
@@ -64,13 +46,11 @@ alias ns="npm search"
 alias nd="npm docs"
 
 # misc
+alias g="git"
 alias s="sudo"
 alias so="source"
 alias t="tmux -2"
 alias myip="curl -s icanhazip.com"
 alias dotfiles="cd ~/.dotfiles"
-alias emacs="emacs -nw"
 alias mkdir="mkdir -p"
 alias reload="exec bash -l"
-
-alias em="ember"
