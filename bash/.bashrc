@@ -36,7 +36,7 @@ if [ -d "${PYENV_ROOT}" ]; then
 fi
 
 export PATH=$HOME/local/bin:$PATH
-export EDITOR=vim
+export EDITOR=nvim
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 
 # Prettier `ls` colors
