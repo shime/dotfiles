@@ -19,3 +19,5 @@ vim/.vim/spell
 utils/.config/configstore
 utils/.config/gtk-2.0
 utils/.config/browser-launcher2
+utils/bin/lein
+utils/bin/ngrok
