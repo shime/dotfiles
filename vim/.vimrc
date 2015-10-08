@@ -59,18 +59,11 @@ let g:vim_markdown_folding_disabled=1
 " Tell ag.vim to stop using regex search
 let g:ackprg = 'ag --nogroup --nocolor --column --literal'
 
-" Tabularize mappings
-nmap <Leader>= :Tabularize /=<CR>
-vmap <Leader>= :Tabularize /=<CR>
-nmap <Leader>: :Tabularize /:\zs<CR>
-vmap <Leader>: :Tabularize /:\zs<CR>
-
 " Press gm to preview markdown file
 map gm :call LivedownPreview()<CR>
 
 " Eunuch mappings
 map <leader>m :Move %%
-
 
 " Used for project-wide search and replace with
 "

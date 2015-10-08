@@ -8,7 +8,6 @@
   "license": "MIT",
   "dependencies": {
     "matchit.zip": "vim-scripts/matchit.zip#~1.13.2",
-    "tabular": "godlygeek/tabular",
     "vim-repeat": "tpope/vim-repeat",
     "tmuxline.vim": "edkolev/tmuxline.vim",
     "vim-stylus": "wavded/vim-stylus#~0.9.1",
@@ -42,6 +41,7 @@
     "vim-airline": "bling/vim-airline",
     "molokai": "shime/molokai",
     "loremipsum": "vim-scripts/loremipsum",
-    "vim-pathogen": "tpope/vim-pathogen"
+    "vim-pathogen": "tpope/vim-pathogen",
+    "vim-sneak": "justinmk/vim-sneak#~1.7.4"
   }
 }
