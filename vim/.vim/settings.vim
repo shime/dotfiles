@@ -1,6 +1,5 @@
 " General
 " =======
-"
 " Remember more stuff in history
 set history=1000
 
@@ -36,7 +35,7 @@ set autoread
 " Stop redrawing while executing macros (perfomance)
 set lazyredraw
 
-" Stop clearing screen when suspended
+" Stop clearing screen on exit
 set t_ti= t_te=
 
 " With a map leader it's possible to do extra key combinations
@@ -118,7 +117,6 @@ set smartindent
 
 " Status line
 " ===========
-"
 " Show current cursor position
 set ruler
 
