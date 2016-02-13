@@ -41,7 +41,6 @@
     "vim-airline": "bling/vim-airline",
     "molokai": "shime/molokai",
     "loremipsum": "vim-scripts/loremipsum",
-    "vim-pathogen": "tpope/vim-pathogen",
-    "vim-sneak": "justinmk/vim-sneak#~1.7.4"
+    "vim-pathogen": "tpope/vim-pathogen"
   }
 }
