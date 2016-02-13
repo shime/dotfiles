@@ -12,13 +12,13 @@ backup_dir=$HOME/.dotfiles_backup/
 
 # Makes backup dir if it does not exist
 make_backup_dir () {
-	if [ -d $backup_dir ]
-	then
-		:
-	else
-		mkdir $backup_dir
-		echo "Created dotfiles backup dir $backup_dir"
-	fi
+  if [ -d $backup_dir ]
+  then
+    :
+  else
+    mkdir $backup_dir
+    echo "Created dotfiles backup dir $backup_dir"
+  fi
 }
 
 
@@ -27,38 +27,38 @@ make_backup_dir () {
 # $HOME dir and backs it to $backup_dir.
 # Does so for 'real' files&dirs, not symlinks
 backup_file () {
-	file=$1
+  file=$1
 
-	if [[ -f $file && ! -h $file ]]    	# if file exists (not symlink), backup it
-	then
-		make_backup_dir
-		mv $file $backup_dir
-		echo "Backing up $file"
-	fi
+  if [[ -f $file && ! -h $file ]]    	# if file exists (not symlink), backup it
+  then
+    make_backup_dir
+    mv $file $backup_dir
+    echo "Backing up $file"
+  fi
 
-	if [[ -d $file && ! -h $file ]]         # if it is a dir
-	then
-		make_backup_dir
-		cp -r $file $backup_dir
-		rm -r $file
-		echo "Backing up $file"
-	fi
+  if [[ -d $file && ! -h $file ]]         # if it is a dir
+  then
+    make_backup_dir
+    cp -r $file $backup_dir
+    rm -r $file
+    echo "Backing up $file"
+  fi
 }
 
 
 
 symlink_backup () {
-    dotfile=$1
-    dotfile_home=$2
+  dotfile=$1
+  dotfile_home=$2
 
-    backup_file $dotfile_home
+  backup_file $dotfile_home
 
-    # if $HOME/$file is symlink - delete it so it is not followed
-    [[ -h $dotfile_home ]] && rm $dotfile_home
+  # if $HOME/$file is symlink - delete it so it is not followed
+  [[ -h $dotfile_home ]] && rm $dotfile_home
 
-    echo "Symlinking:  $dotfile   ->   $dotfile_home"
-    # -s symbolic, -f unlink symlink
-    ln -sf $dotfile $dotfile_home
+  echo "Symlinking:  $dotfile   ->   $dotfile_home"
+  # -s symbolic, -f unlink symlink
+  ln -sf $dotfile $dotfile_home
 
 }
 
@@ -67,26 +67,26 @@ symlink_backup () {
 # Iterate through (visible) dirs in root_folder (1st arg)
 # and symlink all the files&dirs found in them to $HOME.
 install_dotfiles () {
-    # Starting directory
-    root_folder=$1
+  # Starting directory
+  root_folder=$1
 
-    # Iterating over directories in root_folder
-    for folder in `ls $root_folder`
-    do
-        full_folder=$root_folder/$folder
+  # Iterating over directories in root_folder
+  for folder in `ls $root_folder`
+  do
+    full_folder=$root_folder/$folder
 
-        if [[ -d $full_folder && $folder != "private" && $folder != "installations" && $folder != "external" ]]
-        then
-            # Iterating over all files in directories
-            for file in `ls -a $full_folder`
-            do
-                full_file=$full_folder/$file
+    if [[ -d $full_folder && $folder != "private" && $folder != "installations" && $folder != "external" ]]
+    then
+      # Iterating over all files in directories
+      for file in `ls -a $full_folder`
+      do
+        full_file=$full_folder/$file
 
-                # Filtering out git repos, .. and .
-                [[ $file != ".git" && $file != ".." && $file != "." && $file != ".DS_Store" ]] && symlink_backup $full_file $HOME/$file
-            done
-        fi
-    done
+        # Filtering out git repos, .. and .
+        [[ $file != ".git" && $file != ".." && $file != "." && $file != ".DS_Store" ]] && symlink_backup $full_file $HOME/$file
+      done
+    fi
+  done
 }
 
 
@@ -121,53 +121,53 @@ install_binaries(){
 
 # At the end of script, move unecesary symlinks from home dir to ~/.dotfiles_other
 make_custom_changes () {
-    [[ -h $HOME/git-completion.bash ]] && mv -f $HOME/git-completion.bash $HOME/.dotfiles_other/
-    [[ -h $HOME/git-prompt.sh ]]       && mv -f $HOME/git-prompt.sh $HOME/.dotfiles_other/
-    [[ -h $HOME/.screenrc ]]           && mv -f $HOME/.screenrc     $HOME/.dotfiles_other/
-    [[ -h $HOME/screen_ssh.sh ]]       && mv -f $HOME/screen_ssh.sh $HOME/.dotfiles_other/
-    [[ -h $HOME/.ackrc ]]              && mv -f $HOME/.ackrc        $HOME/.dotfiles_other/
-    [[ -h $HOME/.git_template && ! -h $HOME/.dotfiles_other/.git_template ]] && mv $HOME/.git_template $HOME/.dotfiles_other/.git_template
-    [[ -h $HOME/tmux.dev ]]            && mv -f $HOME/tmux*         $HOME/.dotfiles_other/
-    [[ -h $HOME/.bash_authentications ]] && mv -f $HOME/.bash_authentications $HOME/.dotfiles_other/
+  [[ -h $HOME/git-completion.bash ]] && mv -f $HOME/git-completion.bash $HOME/.dotfiles_other/
+  [[ -h $HOME/git-prompt.sh ]]       && mv -f $HOME/git-prompt.sh $HOME/.dotfiles_other/
+  [[ -h $HOME/.screenrc ]]           && mv -f $HOME/.screenrc     $HOME/.dotfiles_other/
+  [[ -h $HOME/screen_ssh.sh ]]       && mv -f $HOME/screen_ssh.sh $HOME/.dotfiles_other/
+  [[ -h $HOME/.ackrc ]]              && mv -f $HOME/.ackrc        $HOME/.dotfiles_other/
+  [[ -h $HOME/.git_template && ! -h $HOME/.dotfiles_other/.git_template ]] && mv $HOME/.git_template $HOME/.dotfiles_other/.git_template
+  [[ -h $HOME/tmux.dev ]]            && mv -f $HOME/tmux*         $HOME/.dotfiles_other/
+  [[ -h $HOME/.bash_authentications ]] && mv -f $HOME/.bash_authentications $HOME/.dotfiles_other/
 
 
-    # if files aren't moved because same symlinks exist - delete symlinks from home dir
-    [[ -h $HOME/git-completion.bash ]] && rm $HOME/git-completion.bash
-    [[ -h $HOME/git-prompt.sh ]]       && rm $HOME/git-prompt.sh
-    [[ -h $HOME/.screenrc ]]           && rm $HOME/.screenrc
-    [[ -h $HOME/screen_ssh.sh ]]       && rm $HOME/screen_ssh.sh
-    [[ -h $HOME/ctags ]]               && rm $HOME/ctags
-    [[ -h $HOME/.ackrc ]]              && rm $HOME/.ackrc
-    [[ -h $HOME/.git_template ]]       && rm $HOME/.git_template
-    [[ -h $HOME/tmux.dev ]]            && rm $HOME/tmux*
-    [[ -h $HOME/.bash_authentications ]] && rm -f $HOME/.bash_authentications
+  # if files aren't moved because same symlinks exist - delete symlinks from home dir
+  [[ -h $HOME/git-completion.bash ]] && rm $HOME/git-completion.bash
+  [[ -h $HOME/git-prompt.sh ]]       && rm $HOME/git-prompt.sh
+  [[ -h $HOME/.screenrc ]]           && rm $HOME/.screenrc
+  [[ -h $HOME/screen_ssh.sh ]]       && rm $HOME/screen_ssh.sh
+  [[ -h $HOME/ctags ]]               && rm $HOME/ctags
+  [[ -h $HOME/.ackrc ]]              && rm $HOME/.ackrc
+  [[ -h $HOME/.git_template ]]       && rm $HOME/.git_template
+  [[ -h $HOME/tmux.dev ]]            && rm $HOME/tmux*
+  [[ -h $HOME/.bash_authentications ]] && rm -f $HOME/.bash_authentications
 }
 
 # Copies files&dirs from $backup_dir to
 # home dir.
 restore_dotfiles () {
-	if [[ -d $backup_dir ]]     # if backup_dir exists at all
-	then
-		echo "Copying from $backup_dir to  ~"
-		cp -r $backup_dir $HOME
-	else
-		echo "Backup dir $backup_dir doesn't event exists!"
-	fi
+  if [[ -d $backup_dir ]]     # if backup_dir exists at all
+  then
+    echo "Copying from $backup_dir to  ~"
+    cp -r $backup_dir $HOME
+  else
+    echo "Backup dir $backup_dir doesn't event exists!"
+  fi
 }
 
 
 
 show_help () {
-cat <<-Eom
-USAGE
-    dotify              -> copies dotfiles to home dir
-	-> if there is dotfile conflict, makes backup to ~/.doftiles_backup
+  cat <<-Eom
+  USAGE
+  dotify              -> copies dotfiles to home dir
+  -> if there is dotfile conflict, makes backup to ~/.doftiles_backup
 
-    dotify help         -> shows this help
-    dotify uninstall    -> restores dotfiles from ~/.dotfiles_backup
+  dotify help         -> shows this help
+  dotify uninstall    -> restores dotfiles from ~/.dotfiles_backup
 
-Eom
-exit 0
+  Eom
+  exit 0
 
 }
 
@@ -175,27 +175,27 @@ exit 0
 # Does all the work...
 make_installation () {
 
-    echo -e "\n[dotify] Installing vim plugins...\n"
-    cd $dotfile_dir
-    bower install
+  echo -e "\n[dotify] Installing vim plugins...\n"
+  cd $dotfile_dir
+  bower install
 
-    echo -e "\n[dotify] Symlinking dotfiles \n"
+  echo -e "\n[dotify] Symlinking dotfiles \n"
 
-    # Installs regular dotfiles
-    install_dotfiles "$dotfile_dir"
+  # Installs regular dotfiles
+  install_dotfiles "$dotfile_dir"
 
-    echo -e "\n[dotify] Symlinking private dotfiles \n"
+  echo -e "\n[dotify] Symlinking private dotfiles \n"
 
-    # Installs private dotfiles
-    install_dotfiles "$dotfile_dir/private"
+  # Installs private dotfiles
+  install_dotfiles "$dotfile_dir/private"
 
-    echo -e "\n[dotify] Symlinking external dotfiles \n"
+  echo -e "\n[dotify] Symlinking external dotfiles \n"
 
-    # Installs binary files from other people
-    install_binaries "$dotfile_dir/external"
+  # Installs binary files from other people
+  install_binaries "$dotfile_dir/external"
 
-    # moves unecessary symlinks from home dir to ~/.dotfiles_other
-    make_custom_changes
+  # moves unecessary symlinks from home dir to ~/.dotfiles_other
+  make_custom_changes
 
 }
 
@@ -206,19 +206,14 @@ make_installation () {
 
 if [ "$#" -eq 0 ]                  # no arguments
 then
-
-    make_installation
-
+  make_installation
 elif [[ $1 = "uninstall" || $1 = "restore" || $1 = "r" || $1 = "-r" ]]
 then
-	restore_dotfiles
-
+  restore_dotfiles
 elif [[ $1 = "help" || $1 = "h" || $1 = "-h" || "--help" ]]     # help
 then
-	show_help
+  show_help
 
 else 								# unknown argument(s)
-	show_help
-
+  show_help
 fi
-
