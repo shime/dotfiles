@@ -11,8 +11,6 @@
 "                                       specific plugin
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Better colors for Molokai
-let g:rehash256 = 1
 
 " Enable Pathogen
 execute pathogen#infect()
@@ -35,8 +33,8 @@ let g:ctrlp_regexp = 1
 " Set CTRL-P working directory to the first ancestor directory that contains .git/
 let g:ctrlp_working_path_mode = 2
 
-" " Airline configuration
-let g:airline_theme='serene'
+" Airline configuration
+let g:airline_theme='term'
 let g:airline_detect_whitespace=0
 let g:airline_section_a="%f%m"
 let g:airline_section_b="%y"
@@ -83,4 +81,4 @@ endfunction
 
 cabbrev ag Ag
 
-argdo set eventignore-=Syntax
+" argdo set eventignore-=Syntax

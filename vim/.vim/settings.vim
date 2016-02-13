@@ -27,7 +27,8 @@ syntax enable
 
 " Set color scheme
 set t_Co=256
-colorscheme molokai
+set background=dark
+colorscheme hs256
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -130,15 +131,6 @@ set statusline+=\ %3*%y%*                  " filetype
 set statusline+=\ %4*%{fugitive#head()}%0* " git branch
 set statusline+=%=                         " left-right separation point
 set statusline+=\ %5*%l%*/%L[%p%%]%5*      " current line/total lines
-
-" Status line colors
-hi StatusLine term=inverse,bold cterm=NONE ctermbg=24 ctermfg=189
-hi StatusLineNC term=inverse,bold cterm=NONE ctermbg=24 ctermfg=153
-hi User1 term=inverse,bold cterm=NONE ctermbg=29 ctermfg=159
-hi User2 term=inverse,bold cterm=NONE ctermbg=29 ctermfg=16
-hi User3 term=inverse,bold cterm=NONE ctermbg=24
-hi User4 term=inverse,bold cterm=NONE ctermbg=24 ctermfg=221
-hi User5 term=inverse,bold cterm=NONE ctermbg=24 ctermfg=209
 
 " Whitespace
 " ===========
