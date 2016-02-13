@@ -16,8 +16,6 @@ utils/bin/pair
 vim/.vim/bundle
 vim/.vim/spell
 
-utils/.config/configstore
-utils/.config/gtk-2.0
-utils/.config/browser-launcher2
+utils/.config/
 utils/bin/lein
 utils/bin/ngrok
