@@ -80,5 +80,3 @@ function! QuickfixFilenames()
 endfunction
 
 cabbrev ag Ag
-
-" argdo set eventignore-=Syntax
