@@ -80,3 +80,5 @@ function! QuickfixFilenames()
 endfunction
 
 cabbrev ag Ag
+
+set colorcolumn=80
