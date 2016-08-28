@@ -15,7 +15,7 @@ export PATH=./node_modules/.bin:$PATH
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 
 if hash chruby 2>/dev/null;then
-  chruby 2.2.0
+  chruby 2.3.0
 fi
 
 source /usr/local/opt/chruby/share/chruby/auto.sh
