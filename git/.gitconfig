@@ -1,6 +1,7 @@
 [user]
 	name = Hrvoje Šimić
 	email = shime@twobucks.co
+	username = shime
 [credential]
 	helper = cache
 [pull]
@@ -9,6 +10,7 @@
 	user = shime
 [push]
 	default = current
+	followTags = true
 [color]
 	ui = true
 [url "https://"]
@@ -37,3 +39,5 @@
   ss = stash save
   sp = stash pop
   u  = reset HEAD~1
+[core]
+	excludesfile = ~/.gitignore
