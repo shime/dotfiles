@@ -41,3 +41,5 @@
   u  = reset HEAD~1
 [core]
 	excludesfile = ~/.gitignore
+[diff]
+	compactionHeuristic = true
