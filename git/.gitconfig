@@ -41,5 +41,10 @@
   u  = reset HEAD~1
 [core]
 	excludesfile = ~/.gitignore
+	pager = less -+F
 [diff]
 	compactionHeuristic = true
+[pager]
+	diff = sed \"s/^\\([^-+ ]*\\)[-+ ]/\\\\1/\"
+	log = sed \"s/^\\([^-+ ]*\\)[-+ ]/\\\\1/\"
+	show = sed \"s/^\\([^-+ ]*\\)[-+ ]/\\\\1/\"
