@@ -2,6 +2,7 @@
 	name = Hrvoje Šimić
 	email = shime@twobucks.co
 	username = shime
+	signingkey = 414AA9B2
 [credential]
 	helper = cache
 [pull]
@@ -41,10 +42,7 @@
   u  = reset HEAD~1
 [core]
 	excludesfile = ~/.gitignore
-	pager = less -+F
 [diff]
 	compactionHeuristic = true
-[pager]
-	diff = sed \"s/^\\([^-+ ]*\\)[-+ ]/\\\\1/\"
-	log = sed \"s/^\\([^-+ ]*\\)[-+ ]/\\\\1/\"
-	show = sed \"s/^\\([^-+ ]*\\)[-+ ]/\\\\1/\"
+[commit]
+	gpgsign = true
