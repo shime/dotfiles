@@ -12,6 +12,8 @@ alias tmuxrc='e ~/.tmux.conf'
 alias zshrc='e ~/.zshrc'
 alias bashrc='e ~/.bashrc'
 alias aliases='e ~/.aliases'
+alias vi='nvim'
+alias vim='nvim'
 
 # ruby stuff
 alias r="rails $*"
