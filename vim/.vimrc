@@ -58,7 +58,7 @@ let g:vim_markdown_folding_disabled=1
 let g:ackprg = 'ag --nogroup --nocolor --column --literal'
 
 " Press gm to preview markdown file
-map gm :call LivedownPreview()<CR>
+map gm :LivedownPreview<CR>
 
 " Eunuch mappings
 map <leader>m :Move %%
