@@ -46,3 +46,5 @@ export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export NVM_DIR="/Users/hrvoje/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
+
+eval "$(hub alias -s)"
