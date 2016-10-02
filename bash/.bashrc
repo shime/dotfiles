@@ -25,7 +25,6 @@ source ~/.functions
 if [ -f ~/.secrets ]; then
   source ~/.secrets
 fi
-source ~/.opinions
 source ~/.sexy_prompt
 
 export PYENV_ROOT="${HOME}/.pyenv"
