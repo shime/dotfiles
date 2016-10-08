@@ -42,6 +42,7 @@
     "molokai": "shime/molokai",
     "loremipsum": "vim-scripts/loremipsum",
     "vim-pathogen": "tpope/vim-pathogen",
-    "vim-go": "fatih/vim-go#~1.7.1"
+    "vim-go": "fatih/vim-go#~1.7.1",
+    "vim-json": "elzr/vim-json"
   }
 }
