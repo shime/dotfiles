@@ -42,8 +42,6 @@ DISABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
-
 [ -s "/home/hrvoje/.scm_breeze/scm_breeze.sh" ] && source "/home/hrvoje/.scm_breeze/scm_breeze.sh"
 
 # turn off Ctrl + s XOFF (XON is Ctrl + q)
@@ -56,10 +54,15 @@ export PATH="$PATH:$HOME/bin"
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
 
-source ~/chruby-0.3.8/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+
+if hash chruby 2>/dev/null;then
+  chruby 2.3.0
+fi
+
+source /usr/local/opt/chruby/share/chruby/auto.sh
 source ~/.aliases
 source ~/.functions
 source ~/.secrets
-source ~/.opinions
 
 chruby 2.0
