@@ -22,9 +22,6 @@ if has("autocmd")
   " Treat .js.es6 files as JavaScript
   au BufNewFile,BufRead *.js.es6 setf javascript
 
-  " Make sure first line of git commit message is less than 70 chars
-  au FileType gitcommit set tw=70
-
   " Source the vimrc file after saving it
   " http://vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/
   au bufwritepost .vimrc source $MYVIMRC
