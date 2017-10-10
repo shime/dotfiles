@@ -33,6 +33,8 @@ let g:ctrlp_regexp = 1
 " Set CTRL-P working directory to the first ancestor directory that contains .git/
 let g:ctrlp_working_path_mode = 2
 
+" let g:ctrlp_cmd = 'CtrlPMRU'
+
 " Airline configuration
 let g:airline_theme='term'
 let g:airline_detect_whitespace=0
@@ -97,3 +99,17 @@ endfunction
 if has("autocmd")
   autocmd VimEnter * :call SetupCtrlP()
 endif
+
+" Show git diff for current file
+map <leader>d :!git diff %<CR>
+
+map <C-a> :Ag 
+
+let g:jsx_ext_required = 0
+
+augroup sparkup_types
+  " Remove ALL autocommands of the current group.
+  autocmd!
+  " Add sparkup to new filetypes
+  autocmd FileType javascript runtime! ftplugin/html/sparkup.vim
+augroup END
