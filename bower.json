@@ -43,6 +43,11 @@
     "loremipsum": "vim-scripts/loremipsum",
     "vim-pathogen": "tpope/vim-pathogen",
     "vim-go": "fatih/vim-go#~1.7.1",
-    "vim-json": "elzr/vim-json"
+    "vim-json": "elzr/vim-json",
+    "vim-rubocop": "ngmy/vim-rubocop",
+    "vim-jsx": "https://github.com/mxw/vim-jsx.git",
+    "typescript-vim": "leafgarland/typescript-vim",
+    "yajs.vim": "othree/yajs.vim#^1.1.1",
+    "ZoomWin": "vim-scripts/ZoomWin"
   }
 }
