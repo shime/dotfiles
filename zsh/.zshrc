@@ -66,3 +66,8 @@ source ~/.functions
 source ~/.secrets
 
 chruby 2.0
+
+# added by travis gem
+[ -f /Users/hrvoje/.travis/travis.sh ] && source /Users/hrvoje/.travis/travis.sh
+
+[ -s "/Users/hrvoje/.scm_breeze/scm_breeze.sh" ] && source "/Users/hrvoje/.scm_breeze/scm_breeze.sh"
