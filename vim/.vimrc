@@ -83,8 +83,6 @@ endfunction
 
 cabbrev ag Ag
 
-set colorcolumn=80
-
 " CtrlP auto cache clearing.
 " ----------------------------------------------------------------------------
 function! SetupCtrlP()
@@ -113,3 +111,5 @@ augroup sparkup_types
   " Add sparkup to new filetypes
   autocmd FileType javascript runtime! ftplugin/html/sparkup.vim
 augroup END
+
+let $BASH_ENV = "~/.aliases"
