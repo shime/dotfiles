@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="nuclear-robby"
+ZSH_THEME="hs"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -40,9 +40,11 @@ DISABLE_CORRECTION="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-# plugins=(git)
+plugins=(zsh-completions)
 
-[ -s "/home/hrvoje/.scm_breeze/scm_breeze.sh" ] && source "/home/hrvoje/.scm_breeze/scm_breeze.sh"
+source $ZSH/oh-my-zsh.sh
+
+rm -f ~/.zcompdump; compinit
 
 # turn off Ctrl + s XOFF (XON is Ctrl + q)
 stty ixany
@@ -50,24 +52,35 @@ stty ixoff -ixon
 stty stop undef
 stty start undef
 
+
 export PATH="$PATH:$HOME/bin"
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
+export HISTSIZE=10000000
+export SAVEHIST=10000000
+export HISTCONTROL="ignoreboth:erasedups"
+export PATH=$HOME/local/bin:$PATH
+export EDITOR=nvim
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
 
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 
-if hash chruby 2>/dev/null;then
-  chruby 2.3.0
-fi
+chruby 2.5.0
 
 source /usr/local/opt/chruby/share/chruby/auto.sh
+
+export NVM_DIR="/Users/hrvoje/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion # This adds bash completion to nvm
+
 source ~/.aliases
 source ~/.functions
-source ~/.secrets
+if [ -f ~/.secrets ]; then
+  source ~/.secrets
+fi
 
-chruby 2.0
-
-# added by travis gem
-[ -f /Users/hrvoje/.travis/travis.sh ] && source /Users/hrvoje/.travis/travis.sh
-
-[ -s "/Users/hrvoje/.scm_breeze/scm_breeze.sh" ] && source "/Users/hrvoje/.scm_breeze/scm_breeze.sh"
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+bindkey '^ ' autosuggest-accept
