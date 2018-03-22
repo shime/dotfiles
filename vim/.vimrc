@@ -36,14 +36,14 @@ let g:ctrlp_working_path_mode = 2
 " let g:ctrlp_cmd = 'CtrlPMRU'
 
 " Airline configuration
-let g:airline_theme='term'
+let g:airline_theme='simple'
 let g:airline_detect_whitespace=0
 let g:airline_section_a="%f%m"
 let g:airline_section_b="%y"
 let g:airline_section_c="%{airline#util#wrap(airline#extensions#branch#get_head(),0)}"
 let g:airline_section_x=""
 let g:airline_section_y=""
-let g:airline_section_z="%l/%L[%p%%]"
+let g:airline_section_z="%c %l/%L[%p%%]"
 
 " Tmuxline configuration
 let g:tmuxline_separators = {
@@ -101,7 +101,7 @@ endif
 " Show git diff for current file
 map <leader>d :!git diff %<CR>
 
-map <C-a> :Ag 
+map <C-a> :Ag
 
 let g:jsx_ext_required = 0
 
