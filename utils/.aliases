@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
+# shopt -s expand_aliases
 
 # dir stuff
 alias ..='cd ..'
 alias l='ls'
 alias lss='ls++'
+alias cat='ccat'
 
 # vim stuff
-alias vi='vim'
+alias vi='nvim'
 alias e='vim'
 alias vimrc='e ~/.vimrc'
 alias tmuxrc='e ~/.tmux.conf'
