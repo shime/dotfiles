@@ -85,6 +85,8 @@ map <Leader>v :vnew %%
 " Opens a new tab in the current directory
 map <leader>te :tabedit %%
 
+map <leader>E :e!<CR>
+
 " Open files in directory of current file
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
