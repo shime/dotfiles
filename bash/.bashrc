@@ -16,7 +16,7 @@ export PATH=$HOME/code/hack/depot_tools:$PATH
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 
 if hash chruby 2>/dev/null;then
-  chruby 2.4.1
+  chruby 2.5.0
 fi
 
 source /usr/local/opt/chruby/share/chruby/auto.sh
@@ -53,10 +53,6 @@ export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Ho
 # added by travis gem
 [ -f /Users/hrvoje/.travis/travis.sh ] && source /Users/hrvoje/.travis/travis.sh
 
-# tabtab source for electron-forge package
-# uninstall by removing these lines or running `tabtab uninstall electron-forge`
-[ -f /Users/hrvoje/.nvm/versions/node/v7.3.0/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.bash ] && . /Users/hrvoje/.nvm/versions/node/v7.3.0/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.bash
-
 export CXX="`which clang++`"
 export CC="`which clang`"
 export CPP="`which clang` -E"
@@ -66,3 +62,6 @@ export CC_host="`which clang`"
 export CPP_host="`which clang` -E"
 export LINK_host="`which clang++`"
 export GYP_DEFINES="clang=1"
+
+export HISTSIZE="INFINITY"
+export HISTCONTROL="ignoreboth:erasedups"
