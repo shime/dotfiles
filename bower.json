@@ -48,6 +48,7 @@
     "vim-jsx": "https://github.com/mxw/vim-jsx.git",
     "typescript-vim": "leafgarland/typescript-vim",
     "yajs.vim": "othree/yajs.vim#^1.1.1",
-    "ZoomWin": "vim-scripts/ZoomWin"
+    "ZoomWin": "vim-scripts/ZoomWin",
+    "vim-rhubarb": "tpope/vim-rhubarb"
   }
 }
