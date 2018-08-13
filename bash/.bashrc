@@ -16,7 +16,7 @@ export PATH=$HOME/code/hack/depot_tools:$PATH
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 
 if hash chruby 2>/dev/null;then
-  chruby 2.5.0
+  chruby 2.5.1
 fi
 
 source /usr/local/opt/chruby/share/chruby/auto.sh
@@ -43,9 +43,9 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 export CLICOLOR=1
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 
-export NVM_DIR="/Users/hrvoje/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion # This adds bash completion to nvm
+# export NVM_DIR="/Users/hrvoje/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion # This adds bash completion to nvm
 export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
 
 # eval "$(hub alias -s)"

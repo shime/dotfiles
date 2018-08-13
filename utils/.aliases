@@ -5,11 +5,12 @@
 alias ..='cd ..'
 alias l='ls'
 alias lss='ls++'
-alias cat='ccat'
+# alias cat='ccat'
 
 # vim stuff
 alias vi='nvim'
-alias e='vim'
+alias e='nvim'
+alias vim='nvim'
 alias vimrc='e ~/.vimrc'
 alias tmuxrc='e ~/.tmux.conf'
 alias zshrc='e ~/.zshrc'

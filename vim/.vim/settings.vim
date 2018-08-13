@@ -158,3 +158,6 @@ set listchars=tab:▸\ ,trail:⋅,extends:❯,precedes:❮
 " Turn on the WiLd menu (used for command line completion)
 set wildmenu
 set wildmode=longest,list
+
+
+set clipboard=unnamed
