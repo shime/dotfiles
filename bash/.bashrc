@@ -21,19 +21,15 @@ fi
 
 source /usr/local/opt/chruby/share/chruby/auto.sh
 
+eval "$(nodenv init -)"
+nodenv global 9.4.0
+
 source ~/.aliases
 source ~/.functions
 if [ -f ~/.secrets ]; then
   source ~/.secrets
 fi
 source ~/.sexy_prompt
-
-export PYENV_ROOT="${HOME}/.pyenv"
-
-if [ -d "${PYENV_ROOT}" ]; then
-  export PATH="${PYENV_ROOT}/bin:${PATH}"
-  eval "$(pyenv init -)"
-fi
 
 export PATH=$HOME/local/bin:$PATH
 export EDITOR=nvim
@@ -43,15 +39,9 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 export CLICOLOR=1
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 
-# export NVM_DIR="/Users/hrvoje/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-# [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion # This adds bash completion to nvm
 export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
 
-# eval "$(hub alias -s)"
-
-# added by travis gem
-[ -f /Users/hrvoje/.travis/travis.sh ] && source /Users/hrvoje/.travis/travis.sh
+eval "$(hub alias -s)"
 
 export CXX="`which clang++`"
 export CC="`which clang`"

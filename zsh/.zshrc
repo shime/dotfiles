@@ -40,18 +40,15 @@ DISABLE_CORRECTION="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(zsh-completions)
+# plugins=(zsh-completions)
 
 source $ZSH/oh-my-zsh.sh
-
-rm -f ~/.zcompdump; compinit
 
 # turn off Ctrl + s XOFF (XON is Ctrl + q)
 stty ixany
 stty ixoff -ixon
 stty stop undef
 stty start undef
-
 
 export PATH="$PATH:$HOME/bin"
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -68,13 +65,14 @@ setopt hist_ignore_space
 
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 
-chruby 2.5.0
+if hash chruby 2>/dev/null;then
+  chruby 2.5.1
+fi
 
 source /usr/local/opt/chruby/share/chruby/auto.sh
 
-export NVM_DIR="/Users/hrvoje/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion # This adds bash completion to nvm
+eval "$(nodenv init -)"
+nodenv global 9.4.0
 
 source ~/.aliases
 source ~/.functions
