@@ -159,5 +159,5 @@ set listchars=tab:▸\ ,trail:⋅,extends:❯,precedes:❮
 set wildmenu
 set wildmode=longest,list
 
-
-set clipboard=unnamed
+" Expand folds when opening new buffer
+set nofoldenable
