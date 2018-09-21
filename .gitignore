@@ -19,3 +19,4 @@ vim/.vim/spell
 utils/.config/
 utils/bin/lein
 utils/bin/ngrok
+utils/bin/chromedriver
