@@ -1,0 +1,62 @@
+#!/usr/bin/env ruby
+# USAGE: dive GEM_NAME [version] [options]
+#
+# Opens the specified gem in EDITOR. If you're in a Bundler project, it
+# will open the locked-down version of the gem. It also opens libraries from
+# the Ruby standard libary (`Timeout`, `Tempfile`, `URI`, ...).
+#
+# You can supply only the first few letters of the gem/stdlib, and the first
+# that matches will be opened.
+#
+# All additional options will be forwarded to your EDITOR.
+
+require "pathname"
+
+class Dive
+  def initialize(name)
+    @name = name
+  end
+
+  def call(version)
+    pathname = find_gem(version) || find_stdlib
+    fail if pathname.nil?
+    open(pathname)
+  end
+
+  private
+
+  def find_gem(version)
+    gem = gems
+      .select { |gem| gem.name =~ /^#{@name}/i }
+      .find   { |gem| gem.version.to_s.start_with?(version.to_s) }
+    Pathname(gem.full_gem_path).join("lib", "#{gem.name}.rb") if gem
+  end
+
+  def find_stdlib
+    stdlib_dir = Pathname(Gem.dir).parent.parent.join(Gem.ruby_api_version)
+    Pathname.glob(stdlib_dir.join("*.rb")).find { |p| p.basename.to_s =~ /^#{@name}/i }
+  end
+
+  def gems
+    require "bundler"
+    Bundler.environment.specs.to_a | Gem::Specification.to_a
+  rescue Bundler::BundlerError
+    Gem::Specification.to_a
+  end
+
+  def open(pathname)
+    Dir.chdir(pathname.dirname) do
+      system ENV["EDITOR"], (pathname.exist? ? pathname.basename.to_s : "."), *ARGV
+    end
+  end
+
+  def fail
+    warn "Gem not found: #{@name}"
+    exit
+  end
+end
+
+name    = ARGV.shift
+version = ARGV.shift if ARGV.first =~ /^\d/
+
+Dive.new(name).call(version)
