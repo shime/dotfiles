@@ -5,6 +5,7 @@ stty stop undef
 stty start undef
 
 export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:bin"
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
 export PATH="$HOME/.gem/ruby/2.1.0/bin:$PATH"

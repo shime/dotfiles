@@ -51,6 +51,7 @@ stty stop undef
 stty start undef
 
 export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:bin"
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
 export HISTSIZE=10000000
