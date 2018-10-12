@@ -58,8 +58,7 @@ alias myip="curl -s icanhazip.com"
 alias dotfiles="cd ~/.dotfiles"
 alias mkdir="mkdir -p"
 alias reload="exec bash -l"
-alias itest="blue-tape -r ./test/integration_tests/test-init.js"
-alias utest="blue-tape -r ./test/unit_tests/test-init.js"
+alias gti="git"
 
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
