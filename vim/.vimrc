@@ -113,3 +113,6 @@ augroup sparkup_types
 augroup END
 
 let $BASH_ENV = "~/.aliases"
+
+set autoread
+au FocusGained * :checktime
