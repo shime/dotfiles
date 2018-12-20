@@ -51,6 +51,7 @@
     "ZoomWin": "vim-scripts/ZoomWin",
     "vim-rhubarb": "tpope/vim-rhubarb",
     "vim-ruby-fold": "vim-utils/vim-ruby-fold",
-    "vim-svg-indent": "jasonshell/vim-svg-indent"
+    "vim-svg-indent": "jasonshell/vim-svg-indent",
+    "ale": "w0rp/ale#^2.3.0"
   }
 }

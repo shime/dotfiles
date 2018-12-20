@@ -116,3 +116,25 @@ let $BASH_ENV = "~/.aliases"
 
 set autoread
 au FocusGained * :checktime
+
+" ALE settings
+let g:ale_sign_column_always = 1
+let g:airline#extensions#ale#enabled = 1
+let g:ale_linters = {
+\   'css': ['stylelint'],
+\   'slim': ['stylelint'],
+\ }
+let g:ale_fixers = {
+\   'javascript': ['prettier', 'eslint'],
+\   'ruby': ['rubocop'],
+\   'css':  ['stylelint', 'prettier'],
+\   'scss': ['stylelint'],
+\   'erb' : ['erb', 'tidy'],
+\   'html': ['tidy']
+\ }
+let g:ale_enabled = 1
+let g:ale_fix_on_save = 1
+let g:ale_completion_enabled = 1
+
+nmap <silent> <leader>nn :ALENext<cr>
+nmap <silent> <leader>pp :ALEPrevious<cr>
