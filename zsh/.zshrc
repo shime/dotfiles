@@ -66,6 +66,7 @@ export HISTCONTROL="ignoreboth:erasedups"
 export PATH=$HOME/local/bin:$PATH
 export EDITOR=nvim
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+export SKIP=EsLint,RuboCop
 
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
