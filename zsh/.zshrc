@@ -41,6 +41,9 @@ DISABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # plugins=(zsh-completions)
+#
+plugins=()
+#
 
 source $ZSH/oh-my-zsh.sh
 
