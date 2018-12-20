@@ -50,6 +50,7 @@
     "yajs.vim": "othree/yajs.vim#^1.1.1",
     "ZoomWin": "vim-scripts/ZoomWin",
     "vim-rhubarb": "tpope/vim-rhubarb",
-    "vim-ruby-fold": "vim-utils/vim-ruby-fold"
+    "vim-ruby-fold": "vim-utils/vim-ruby-fold",
+    "vim-svg-indent": "jasonshell/vim-svg-indent"
   }
 }
