@@ -44,6 +44,9 @@ DISABLE_CORRECTION="true"
 #
 plugins=()
 #
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
 
 source $ZSH/oh-my-zsh.sh
 
