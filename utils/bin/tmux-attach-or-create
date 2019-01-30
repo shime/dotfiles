@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-sessions=$(tmux list-sessions | cut -d ':' -f 1 | grep home )
-if [ ! "$sessions" == "" ]; then
-  tmux -2 at -t home
-else
-  tmux -2 new-session -s home
-fi
