@@ -1,0 +1,19 @@
+#! /usr/bin/env bash
+
+# Silences the fans of your computer. Kills processes
+# which use more than threshold percent
+# of your CPU.
+
+# The default threshold, processes using more than
+# this percentage of the CPU will be killed with
+# SIGKILL.
+threshold=90
+
+# List PID, CPU percentage and command name.
+ps -eo pid,%cpu,args |
+  # Filter processes that are above the threshold.
+  awk -v threshold=$threshold '{if($2==$2+0 && $2 > threshold) print $1 " " $3}' |
+    # Sort by CPU usage to kill the worst offenders first.
+    sort -n |
+      # # Kill the passed process and report it being killed.
+      xargs -L1 bash -c 'kill -9 $0 && printf "killed: $1\n"'
