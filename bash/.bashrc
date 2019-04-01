@@ -14,16 +14,22 @@ export PATH=$HOME/local/bin:$PATH
 export PATH=./node_modules/.bin:$PATH
 export PATH=$HOME/code/hack/depot_tools:$PATH
 
-source /usr/local/opt/chruby/share/chruby/chruby.sh
+if [ -e "/usr/local/opt/chruby/share/chruby/chruby.sh" ]; then
+  source /usr/local/opt/chruby/share/chruby/chruby.sh
+fi
 
 if hash chruby 2>/dev/null;then
   chruby 2.5.1
 fi
 
-source /usr/local/opt/chruby/share/chruby/auto.sh
+if [ -e "/usr/local/opt/chruby/share/chruby/auto.sh" ]; then
+  source /usr/local/opt/chruby/share/chruby/auto.sh
+fi
 
-eval "$(nodenv init -)"
-nodenv global 9.4.0
+if [ -x "$(command -v nodenv)" ]; then
+  eval "$(nodenv init -)"
+  nodenv global 9.4.0
+fi
 
 source ~/.aliases
 source ~/.functions
@@ -42,7 +48,10 @@ export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 
 export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
 
-eval "$(hub alias -s)"
+if [ -x "$(command -v hub)" ]; then
+  eval "$(hub alias -s)"
+fi
+
 
 export CXX="`which clang++`"
 export CC="`which clang`"

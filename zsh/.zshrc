@@ -71,16 +71,22 @@ export SKIP=EsLint,RuboCop
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
 
-source /usr/local/opt/chruby/share/chruby/chruby.sh
+if [ -e "/usr/local/opt/chruby/share/chruby/chruby.sh" ]; then
+  source /usr/local/opt/chruby/share/chruby/chruby.sh
+fi
 
 if hash chruby 2>/dev/null;then
   chruby 2.5.1
 fi
 
-source /usr/local/opt/chruby/share/chruby/auto.sh
+if [ -e "/usr/local/opt/chruby/share/chruby/auto.sh" ]; then
+  source /usr/local/opt/chruby/share/chruby/auto.sh
+fi
 
-eval "$(nodenv init -)"
-nodenv global 9.4.0
+if [ -x "$(command -v nodenv)" ]; then
+  eval "$(nodenv init -)"
+  nodenv global 9.4.0
+fi
 
 source ~/.aliases
 source ~/.functions
