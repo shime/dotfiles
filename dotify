@@ -194,9 +194,12 @@ make_installation () {
     # Installs binary files from other people
     install_binaries "$dotfile_dir/external"
 
+    echo -e "\n[dotify] Making custom changes\n"
+
     # moves unecessary symlinks from home dir to ~/.dotfiles_other
     make_custom_changes
 
+    exit 0
 }
 
 
