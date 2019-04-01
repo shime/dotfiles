@@ -18,14 +18,15 @@ alias bashrc='e ~/.bashrc'
 alias aliases='e ~/.aliases'
 
 # ruby stuff
-alias r="rails $*"
+alias r="./bin/rails $*"
 alias bi="bundle install"
 alias be="bundle exec $*"
-alias rt='rake test'
-alias m="rake db:migrate"
-alias G="e Gemfile"
-alias R="e Rakefile"
-alias C="rails console"
+alias ra='./bin/rake'
+alias rat='./bin/rake test'
+alias m="./bin/rake db:migrate"
+alias rollback="./bin/rake db:rollback"
+alias g="e Gemfile"
+alias c="./bin/rails console"
 
 function gcm(){
   git commit -m "$*"
@@ -54,7 +55,7 @@ alias g="git"
 alias s="sudo"
 alias so="source"
 alias t="tmux -2"
-alias myip="curl -s icanhazip.com"
+alias ip="curl -s icanhazip.com"
 alias dotfiles="cd ~/.dotfiles"
 alias mkdir="mkdir -p"
 alias reload="exec bash -l"

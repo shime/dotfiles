@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+url=$1
+
+# Append http:// to links wihtout it.
+url=$(sed '/^http/! s/^/http:\/\//' <<< $url)
+# Convert http:// to https:// since git.io requires HTTPS.
+url=$(sed 's/^http:/https:/' <<< $url)
+
+curl -si https://git.io -F "url=$url" |
+  grep -Fi Location |
+  cut -d ' ' -f 2

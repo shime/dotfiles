@@ -101,8 +101,6 @@ endif
 " Show git diff for current file
 map <leader>d :!git diff %<CR>
 
-map <C-a> :Ag
-
 let g:jsx_ext_required = 0
 
 augroup sparkup_types
@@ -129,12 +127,11 @@ let g:ale_fixers = {
 \   'ruby': ['rubocop'],
 \   'css':  ['stylelint', 'prettier'],
 \   'scss': ['stylelint'],
-\   'erb' : ['erb', 'tidy'],
-\   'html': ['tidy']
+\   'erb' : ['erb', 'tidy']
 \ }
 let g:ale_enabled = 1
 let g:ale_fix_on_save = 1
-let g:ale_completion_enabled = 1
+let g:ale_completion_enabled = 0
 
 nmap <silent> <leader>nn :ALENext<cr>
 nmap <silent> <leader>pp :ALEPrevious<cr>

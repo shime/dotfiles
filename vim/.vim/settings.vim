@@ -161,3 +161,6 @@ set wildmode=longest,list
 
 " Expand folds when opening new buffer
 set nofoldenable
+
+" Make git diff splits vertical (used when resolving conflicts)
+set diffopt+=vertical

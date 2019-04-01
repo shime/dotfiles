@@ -28,3 +28,7 @@ function! ToggleBundler()
   endif
 endfunction
 
+" https://github.com/jgdavey/vim-turbux/issues/46
+let g:turbux_command_test_unit='./bin/rails test' 
+
+autocmd BufNewFile,BufRead {*_test.rb} let g:turbux_test_type='minitest'

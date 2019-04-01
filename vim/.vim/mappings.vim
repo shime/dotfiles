@@ -34,6 +34,12 @@ noremap <Leader>a :Ag <cword><cr>
 " Search visual selection with ag
 vnoremap <Leader>a y:Ag <C-r>=fnameescape(@")<CR><CR>
 
+" " Replace word under cursor with ag + cdo
+" noremap <Leader>r :Ag <cword><cr>:cdo %s/expand(<cword>/
+
+" " Replace visual selection with ag + cdo
+" vnoremap <Leader>r y:Ag <C-r>=fnameescape(@")<CR><CR> :cdo %s/<cword>/
+
 " Open quickfix at the bottom of the screen
 map <leader>cc :botright cope<cr>
 
@@ -150,8 +156,11 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 vnoremap <silent> * :call VisualSelection('f', '')<CR>
 vnoremap <silent> # :call VisualSelection('b', '')<CR>
 
-" When you press <leader>r you can search and replace the selected text
+" <leader>r searches and replaces the selected text in current file
 vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
+
+" <leader>gr replaces word globaly inside the project
+vnoremap <silent> <leader>gr :call VisualSelection('global_replace', '')<CR>
 
 function! VisualSelection(direction, extra_filter) range
     let l:saved_reg = @"
@@ -166,6 +175,9 @@ function! VisualSelection(direction, extra_filter) range
         call CmdLine("Ack " . '/'. l:pattern . '/' . ' **/*.' . a:extra_filter)
     elseif a:direction == 'replace'
         call CmdLine("%s" . '/'. l:pattern . '/')
+    elseif a:direction == 'global_replace'
+        execute "Ag " . l:pattern
+        call CmdLine("cdo %s/" . l:pattern . "//gc")
     elseif a:direction == 'f'
         execute "normal /" . l:pattern . "^M"
     endif
@@ -175,7 +187,7 @@ function! VisualSelection(direction, extra_filter) range
 endfunction
 
 function! CmdLine(str)
-    exe "menu Foo.Bar :" . a:str
+    exe "menu Foo.Bar :" . a:str . " \| update"
     emenu Foo.Bar
     unmenu Foo
 endfunction
