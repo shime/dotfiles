@@ -28,7 +28,7 @@ syntax enable
 " Set color scheme
 set t_Co=256
 set background=dark
-colorscheme molokai
+colorscheme hs256
 
 " Set to auto read when a file is changed from the outside
 set autoread
