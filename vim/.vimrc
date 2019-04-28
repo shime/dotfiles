@@ -24,17 +24,6 @@ source ~/.vim/autocommands.vim
 " Load plugin specific configurations from ~/.vim/local
 source ~/.vim/local/turbux.vim
 
-" Set CTRL-P to ignore anything matching this regex
-let g:ctrlp_custom_ignore = 'DS_Store\|tmp\|node_modules'
-
-" Set CTRL-P to lookup files based on regex, instead of basename only
-let g:ctrlp_regexp = 1
-
-" Set CTRL-P working directory to the first ancestor directory that contains .git/
-let g:ctrlp_working_path_mode = 2
-
-" let g:ctrlp_cmd = 'CtrlPMRU'
-
 " " Airline configuration
 let g:airline_theme='simple'
 let g:airline_detect_whitespace=0
@@ -139,3 +128,25 @@ nmap <silent> <leader>nn :ALENext<cr>
 nmap <silent> <leader>pp :ALEPrevious<cr>
 
 set scl=yes
+
+" Enable fzf
+set rtp+=/usr/local/opt/fzf
+
+" Customize fzf colors to match your color scheme
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
+" Start FZF with CTRL-P
+nmap <C-P> :FZF<CR>
