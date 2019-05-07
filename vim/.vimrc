@@ -151,4 +151,11 @@ let g:fzf_colors =
 " Start FZF with CTRL-P
 nmap <C-P> :FZF<CR>
 
+" Look up ctags recursively from current dir to home
 set tags=tags,./tags,./.git/tags;$HOME
+
+" Recommended shortcuts from 'ins-completion' help file
+inoremap <C-]> <C-X><C-]>
+inoremap <C-F> <C-X><C-F>
+inoremap <C-D> <C-X><C-D>
+inoremap <C-L> <C-X><C-L>
