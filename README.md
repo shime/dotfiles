@@ -1,6 +1,6 @@
 # Dotfiles
 
-My configuration files for zsh, tmux, vim and others.
+My configuration files for zsh, tmux, vim, etc.
 
 ## Install
 
