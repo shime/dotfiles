@@ -45,13 +45,11 @@ let mapleader = ","
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 
-" Ignore compiled files
+" Ignored files and directories
 set wildignore=*.o,*~,*.pyc
-if has("win16") || has("win32")
-    set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
-else
-    set wildignore+=.git\*,.hg\*,.svn\*
-endif
+set wildignore+=.o,*.obj,.git,tmp,tags
+set wildignore+=*.min.js,*.log,*.gif,*.jpg
+set wildignore+=*/tmp/*,*/node_modules/*,*/.DS_Store
 
 " A buffer becomes hidden when it is abandoned
 set hid
