@@ -49,3 +49,5 @@
 	gpgsign = true
 [diff-so-fancy]
 	markEmptyLines = false
+[init]
+	templatedir = ~/.git_template
