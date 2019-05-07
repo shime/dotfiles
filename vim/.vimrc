@@ -150,3 +150,5 @@ let g:fzf_colors =
 
 " Start FZF with CTRL-P
 nmap <C-P> :FZF<CR>
+
+set tags=tags,./tags,./.git/tags;$HOME
