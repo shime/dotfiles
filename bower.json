@@ -13,7 +13,7 @@
     "vim-stylus": "wavded/vim-stylus#~0.9.1",
     "vim-javascript": "pangloss/vim-javascript#~0.1.0",
     "vim-jade": "digitaltoad/vim-jade",
-    "vim-textobj-rubyblock": "nelstrom/vim-textobj-rubyblock#~0.0.3",
+    "vim-textobj-rubyblock": "nelstrom/vim-textobj-rubyblock#^0.0.3",
     "vim-textobj-user": "kana/vim-textobj-user#~0.6.4",
     "vim-haml": "tpope/vim-haml",
     "vim-coffee-script": "kchmck/vim-coffee-script",
