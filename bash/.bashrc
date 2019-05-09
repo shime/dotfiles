@@ -68,3 +68,5 @@ export HISTCONTROL="ignoreboth:erasedups"
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
