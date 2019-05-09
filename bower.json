@@ -57,6 +57,9 @@
     "vim-snipmate": "garbas/vim-snipmate",
     "vim-snippets": "honza/vim-snippets#^1.0.0",
     "vim-http": "nicwest/vim-http",
-    "fzf.vim": "junegunn/fzf.vim"
+    "fzf.vim": "junegunn/fzf.vim",
+    "vim-ruby": "vim-ruby/vim-ruby",
+    "vim-bundler": "tpope/vim-bundler",
+    "vim-rake": "tpope/vim-rake"
   }
 }
