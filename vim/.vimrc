@@ -74,18 +74,18 @@ cabbrev ag Ag
 
 " CtrlP auto cache clearing.
 " ----------------------------------------------------------------------------
-function! SetupCtrlP()
-  if exists("g:loaded_ctrlp") && g:loaded_ctrlp
-    augroup CtrlPExtension
-      autocmd!
-      autocmd FocusGained  * CtrlPClearCache
-      autocmd BufWritePost * CtrlPClearCache
-    augroup END
-  endif
-endfunction
-if has("autocmd")
-  autocmd VimEnter * :call SetupCtrlP()
-endif
+" function! SetupCtrlP()
+"   if exists("g:loaded_ctrlp") && g:loaded_ctrlp
+"     augroup CtrlPExtension
+"       autocmd!
+"       autocmd FocusGained  * CtrlPClearCache
+"       autocmd BufWritePost * CtrlPClearCache
+"     augroup END
+"   endif
+" endfunction
+" if has("autocmd")
+"   autocmd VimEnter * :call SetupCtrlP()
+" endif
 
 " Show git diff for current file
 map <leader>d :!git diff %<CR>
@@ -119,10 +119,8 @@ let g:ale_fixers = {
 \   'scss': ['stylelint'],
 \   'erb' : ['erb', 'tidy']
 \ }
-let g:ale_fix_on_save = 1
-let g:ale_completion_enabled = 0
-
-
+let g:ale_fix_on_save = 0
+let g:ale_completion_enabled = 1
 
 nmap <silent> <leader>nn :ALENext<cr>
 nmap <silent> <leader>pp :ALEPrevious<cr>
@@ -159,3 +157,17 @@ inoremap <C-]> <C-X><C-]>
 inoremap <C-F> <C-X><C-F>
 inoremap <C-D> <C-X><C-D>
 inoremap <C-L> <C-X><C-L>
+
+" Mappings for vim-test
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
+
+" Use vimux for vim test
+let test#strategy = "vimux"
+
+" Auto-reload the file if it changes on disk
+set autoread                                                                                                                                                                                    
+au CursorHold * checktime
