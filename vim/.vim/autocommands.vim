@@ -21,11 +21,4 @@ if has("autocmd")
 
   " Treat .js.es6 files as JavaScript
   au BufNewFile,BufRead *.js.es6 setf javascript
-
-  " Source the vimrc file after saving it
-  " http://vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/
-  au bufwritepost .vimrc source $MYVIMRC
-  au bufwritepost ~/.vim/settings.vim source $MYVIMRC
-  au bufwritepost ~/.vim/mappings.vim source $MYVIMRC
-  au bufwritepost ~/.vim/autocommands.vim source $MYVIMRC
 endif

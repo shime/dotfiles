@@ -16,6 +16,54 @@
 execute pathogen#infect()
 call pathogen#helptags()
 
+call plug#begin('~/.vim/plugged')
+Plug 'vim-scripts/matchit.zip'
+Plug 'tpope/vim-repeat'
+Plug 'edkolev/tmuxline.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'kana/vim-textobj-user'
+Plug 'tpope/vim-haml'
+Plug 'tpope/vim-unimpaired'
+Plug 'othree/html5.vim'
+Plug 'tristen/vim-sparkup'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-commentary'
+Plug 'bogado/file-line'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'benmills/vimux'
+Plug 'gmarik/vundle'
+Plug 'shime/vim-livedown'
+Plug 'rking/ag.vim'
+Plug 'davidbeckingsale/writegood.vim'
+Plug 'slim-template/vim-slim'
+Plug 'tpope/vim-eunuch'
+Plug 'shime/molokai'
+Plug 'tpope/vim-pathogen'
+Plug 'elzr/vim-json'
+Plug 'https://github.com/mxw/vim-jsx.git'
+Plug 'othree/yajs.vim'
+Plug 'vim-scripts/ZoomWin'
+Plug 'tpope/vim-rhubarb'
+Plug 'jasonshell/vim-svg-indent'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+Plug 'nicwest/vim-http'
+Plug 'junegunn/fzf.vim'
+Plug 'ngmy/vim-rubocop'
+Plug 'vim-ruby/vim-ruby'
+Plug 'w0rp/ale'
+Plug 'tpope/vim-rails'
+Plug 'bling/vim-airline'
+Plug 'vimwiki/vimwiki'
+Plug 'michal-h21/vim-zettel'
+Plug 'alok/notational-fzf-vim'
+
+call plug#end()
+
 " Import settings and mappings
 source ~/.vim/settings.vim
 source ~/.vim/mappings.vim
@@ -182,10 +230,11 @@ nnoremap <leader>ni :e $NOTES_DIR/index.md<CR>:cd $NOTES_DIR<CR>
 command! -nargs=1 Ngrep vimgrep "<args>" $NOTES_DIR/**/*.md
 nnoremap <leader>nn :Ngrep
 
-command! Vlist botright vertical copen | vertical resize 50
-nnoremap <leader>v :Vlist<CR>
-
+" Vimwiki settings
 let g:vimwiki_list = [{'path': '~/Documents/Notes/',
                       \ 'syntax': 'markdown', 'ext': '.wiki', 'diary_rel_path': '.'}]
 
+
+" Notational FZF settings
 let g:nv_search_paths = ['~/Documents/Notes']
+let g:nv_default_extension = '.md'
