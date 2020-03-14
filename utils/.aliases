@@ -10,7 +10,6 @@ alias lss='ls++'
 # vim stuff
 alias vi='nvim'
 alias e='nvim'
-alias vim='nvim'
 alias vimrc='e ~/.vimrc'
 alias tmuxrc='e ~/.tmux.conf'
 alias zshrc='e ~/.zshrc'

@@ -171,3 +171,21 @@ let test#strategy = "vimux"
 " Auto-reload the file if it changes on disk
 set autoread                                                                                                                                                                                    
 au CursorHold * checktime
+
+if executable('rg')
+    let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+    let g:ctrlp_user_caching = 0
+endif
+
+nnoremap <leader>ni :e $NOTES_DIR/index.md<CR>:cd $NOTES_DIR<CR>
+
+command! -nargs=1 Ngrep vimgrep "<args>" $NOTES_DIR/**/*.md
+nnoremap <leader>nn :Ngrep
+
+command! Vlist botright vertical copen | vertical resize 50
+nnoremap <leader>v :Vlist<CR>
+
+let g:vimwiki_list = [{'path': '~/Documents/Notes/',
+                      \ 'syntax': 'markdown', 'ext': '.wiki', 'diary_rel_path': '.'}]
+
+let g:nv_search_paths = ['~/Documents/Notes']

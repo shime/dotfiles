@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+sudo renice +15 -p $(ps ax | grep -E 'ruby|node|watchman|postgres|overmind' | grep -v grep | awk '{print $1}' | tr '\n' ' ')

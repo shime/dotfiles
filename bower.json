@@ -47,6 +47,9 @@
     "vim-ruby": "vim-ruby/vim-ruby",
     "ale": "w0rp/ale#^2.6.0",
     "vim-rails": "tpope/vim-rails",
-    "vim-airline": "bling/vim-airline"
+    "vim-airline": "bling/vim-airline",
+    "vimwiki": "vimwiki/vimwiki#^2.4.1",
+    "vim-zettel": "michal-h21/vim-zettel",
+    "notational-fzf-vim": "alok/notational-fzf-vim#^2.0.0"
   }
 }

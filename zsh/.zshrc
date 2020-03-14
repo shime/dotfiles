@@ -85,7 +85,7 @@ fi
 
 if [ -x "$(command -v nodenv)" ]; then
   eval "$(nodenv init -)"
-  nodenv global 9.4.0
+  nodenv global 10.15.3
 fi
 
 source ~/.aliases
@@ -102,3 +102,14 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+autoload -U edit-command-line
+# Emacs style
+zle -N edit-command-line
+bindkey '^xe' edit-command-line
+bindkey '^x^e' edit-command-line
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+export PATH="/usr/local/opt/libxml2/bin:$PATH"
+export NOTES_DIR=~/Documents/Notes

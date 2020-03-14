@@ -1,4 +1,8 @@
 *.swp
-DS_Store
+.DS_Store
 node_modules
 tags
+Procfile.local
+*.dump
+*.dump.*
+fun.rb
