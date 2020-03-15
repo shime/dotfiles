@@ -157,19 +157,25 @@ nmap <silent> t<C-g> :TestVisit<CR>
 let test#strategy = "vimux"
 
 " Auto-reload the file if it changes on disk
-set autoread                                                                                                                                                                                    
+set autoread
 au CursorHold * checktime
 
 " Notes helpers
-nnoremap <leader>ni :e $NOTES_DIR/index.md<CR>:cd $NOTES_DIR<CR>
+nnoremap <leader>ni :e $NOTES_DIR/index.wiki<CR>:cd $NOTES_DIR<CR>
 command! -nargs=1 Ngrep vimgrep "<args>" $NOTES_DIR/**/*.md
 nnoremap <leader>nn :Ngrep
 
 " Vimwiki settings
 let g:vimwiki_list = [{'path': '~/Documents/Notes/',
-                      \ 'syntax': 'markdown', 'ext': '.wiki', 'diary_rel_path': '.'}]
+                      \ 'syntax': 'markdown', 'ext': '.wiki', 'diary_rel_path': '.', 'auto_tags': 1}]
 
 
 " Notational FZF settings
 let g:nv_search_paths = ['~/Documents/Notes']
 let g:nv_default_extension = '.wiki'
+
+" List backlinks
+nnoremap <leader>nb :exec("NV " . '\[\[' . expand('%:t:r') . '\]\]')<CR>
+
+" Automatically change directory to current open file
+set autochdir
