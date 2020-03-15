@@ -16,6 +16,7 @@ utils/bin/pair
 vim/.vim/bundle
 vim/.vim/plugged
 vim/.vim/spell
+vim/.vim/view
 
 utils/.config/
 utils/bin/lein
