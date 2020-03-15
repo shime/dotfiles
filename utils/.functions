@@ -35,3 +35,12 @@ app-start(){
 
   git clone git@github.com:shime/app-skeleton.git $1
 }
+
+wiki() {
+  vim $NOTES_DIR/index.wiki
+}
+
+
+tldr() {
+  curl "cheat.sh/$@"
+}
