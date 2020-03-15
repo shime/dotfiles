@@ -45,5 +45,6 @@ Plug 'vimwiki/vimwiki'
 Plug 'michal-h21/vim-zettel'
 Plug 'alok/notational-fzf-vim'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'tbabej/taskwiki'
 
 call plug#end()
