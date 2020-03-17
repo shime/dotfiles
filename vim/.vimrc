@@ -162,20 +162,25 @@ au CursorHold * checktime
 
 " Notes helpers
 nnoremap <leader>ni :e $NOTES_DIR/index.wiki<CR>:cd $NOTES_DIR<CR>
-command! -nargs=1 Ngrep vimgrep "<args>" $NOTES_DIR/**/*.md
-nnoremap <leader>nn :Ngrep
 
 " Vimwiki settings
 let g:vimwiki_list = [{'path': '~/Documents/Notes/',
-                      \ 'syntax': 'markdown', 'ext': '.wiki', 'diary_rel_path': '.', 'auto_tags': 1}]
-
+                      \ 'syntax': 'markdown', 'ext': '.wiki', 'diary_rel_path': '.' }]
 
 " Notational FZF settings
 let g:nv_search_paths = ['~/Documents/Notes']
 let g:nv_default_extension = '.wiki'
 
 " List backlinks
-nnoremap <leader>nb :exec("NV " . '\[\[' . expand('%:t:r') . '\]\]')<CR>
+nnoremap <leader>nb :exec("NV " . '\[\[' . expand('%:t:r') . '\]\]\|#' . expand('%:t:r'))<CR>
+nnoremap <leader>nr :exec('e ' . system('ls \| sort -R \| head -n 1'))<CR>
 
-" Automatically change directory to current open file
-set autochdir
+" Set line width for wiki files
+autocmd BufRead,BufNewFile *.wiki setlocal textwidth=60
+
+" Neovim Python settings
+let g:python3_host_prog="/usr/local/bin/python3"
+
+" Create encrypted archive of entire wiki database on each
+" wiki file save and upload it to Google Drive.
+autocmd BufWritePost *.wiki silent !tar cz * | openssl enc -aes-256-cbc -e -pass pass:$WIKI_PASS > ~/Google\ Drive/wiki.tar.gz.enc
