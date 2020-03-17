@@ -35,7 +35,7 @@ let g:airline_section_x=""
 let g:airline_section_y=""
 let g:airline_section_z="%c %l/%L[%p%%]"
 let g:airline#extensions#wordcount#enabled = 1
-let g:airline#extensions#wordcount#filetypes = ['vimwiki']
+let g:airline#extensions#wordcount#filetypes = ['vimwiki', 'markdown']
 
 " Tmuxline configuration
 let g:tmuxline_separators = {
