@@ -37,10 +37,33 @@ app-start(){
 }
 
 wiki() {
-  vim $NOTES_DIR/index.wiki
+  cd $NOTES_DIR
+  e index.wiki
 }
 
 
 tldr() {
   curl "cheat.sh/$@"
+}
+
+note() {
+  if [[ -z $1 ]]; then
+    wiki
+  else
+    local args="$@"
+    nvim -c ":set autochdir" "$HOME/Documents/Notes/$args.wiki"
+  fi
+}
+
+zkf() {
+  cd $HOME/Documents/Notes
+  local files
+  IFS=$'\n' files=($(fzf --height 100% --preview "bat --color always --language md --style plain {}" --preview-window=top:65%))
+  [[ -n "$files" ]] && vim "${files[@]}"
+}
+
+f(){
+  local files
+  IFS=$'\n' files=($(fzf))
+  [[ -n "$files" ]] && vim "${files[@]}"
 }

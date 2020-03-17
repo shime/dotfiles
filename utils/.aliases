@@ -8,7 +8,7 @@ alias lss='ls++'
 # alias cat='ccat'
 
 # vim stuff
-alias vi='nvim'
+alias vi='vim'
 alias e='nvim'
 alias vimrc='e ~/.vimrc'
 alias tmuxrc='e ~/.tmux.conf'
@@ -62,6 +62,3 @@ alias gti="git"
 
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-function f(){
-  vim $(fzf)
-}
