@@ -85,7 +85,7 @@ fi
 
 if [ -x "$(command -v nodenv)" ]; then
   eval "$(nodenv init -)"
-  nodenv global 10.15.3
+  nodenv global 12.16.0
 fi
 
 source ~/.aliases
