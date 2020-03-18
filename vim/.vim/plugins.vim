@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
  Plug 'tpope/vim-repeat'
  Plug 'edkolev/tmuxline.vim'
  Plug 'kana/vim-textobj-user'
+ Plug 'nelstrom/vim-textobj-rubyblock'
  Plug 'tpope/vim-haml'
  Plug 'tpope/vim-unimpaired'
  Plug 'othree/html5.vim'
@@ -46,5 +47,6 @@ call plug#begin('~/.vim/plugged')
  Plug 'camspiers/animate.vim'
  Plug 'camspiers/lens.vim'
  Plug 'junegunn/goyo.vim'
+ Plug 'mhinz/vim-startify'
 
 call plug#end()
