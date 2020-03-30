@@ -48,5 +48,6 @@ call plug#begin('~/.vim/plugged')
  Plug 'camspiers/lens.vim'
  Plug 'junegunn/goyo.vim'
  Plug 'mhinz/vim-startify'
+ Plug 'janko-m/vim-test'
 
 call plug#end()
