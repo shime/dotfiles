@@ -183,7 +183,8 @@ let g:python3_host_prog="/usr/local/bin/python3"
 
 " Create encrypted archive of entire wiki database on each
 " wiki file save and upload it to Google Drive
-autocmd BufWritePost *.wiki silent !tar cz * | openssl enc -aes-256-cbc -e -pass pass:$WIKI_PASS > ~/Google\ Drive/wiki.tar.gz.enc
+autocmd BufWritePost *.wiki silent !tar cz * | openssl enc -aes-256-cbc -e -pass pass:$WIKI_PASS > ~/Google\ Drive/wiki.tar.gz.enc &
+autocmd BufWritePost *.wiki silent !./backlink-janitor . &
 
 " Bubbling up
 nnoremap <silent> <C-k>   :<C-u>move-2<CR>==
@@ -195,3 +196,18 @@ xnoremap <silent> <C-j> :move'>+<CR>gv=gv
 
 " Stop displaying Startify's cowsay header.
 let g:startify_custom_header = ''
+
+" Add forbidden words (useful for writing).
+highlight WordsToAvoid cterm=underline
+function WordsToAvoid()
+    match WordsToAvoid /\c\<\(ly\|just\|that\|already\|actual\|think\|pretty\|to be\|great\|around\|a\slot\|very\|thing\|much\|fortunate\|nice\)\>/
+endfunction
+autocmd FileType vimwiki,markdown call WordsToAvoid()
+
+" Automatically set headers for wiki files.
+function! WikiMode()
+    let filename = '#' . ' ' . fnamemodify(expand('%:r'), ":~:.")
+    call setline(1, filename)
+    execute "w"
+endfunction
+autocmd BufNewFile *.wiki   :call WikiMode()
