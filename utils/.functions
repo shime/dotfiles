@@ -38,7 +38,7 @@ app-start(){
 
 wiki() {
   cd $NOTES_DIR
-  e index.wiki
+  nvim index.wiki
 }
 
 
