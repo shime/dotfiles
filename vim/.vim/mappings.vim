@@ -28,18 +28,6 @@ nmap <leader>V :tabedit $MYVIMRC<CR>
 " Source current buffer with <leader>S
 map <leader>S :so %<CR>
 
-" Search for word under cursor with ag
-noremap <Leader>a :Ag <cword><cr>
-
-" Search visual selection with ag
-vnoremap <Leader>a y:Ag <C-r>=fnameescape(@")<CR><CR>
-
-" " Replace word under cursor with ag + cdo
-" noremap <Leader>r :Ag <cword><cr>:cdo %s/expand(<cword>/
-
-" " Replace visual selection with ag + cdo
-" vnoremap <Leader>r y:Ag <C-r>=fnameescape(@")<CR><CR> :cdo %s/<cword>/
-
 " Open quickfix at the bottom of the screen
 map <leader>cc :botright cope<cr>
 
@@ -56,6 +44,24 @@ function! OpenURL(url)
  redraw!
 endfunction
 command! -nargs=1 OpenURL :call OpenURL(<q-args>)
+
+" Open links with gx
+function! LinkInterceptor()
+  let line0=getline (".")
+  let line=matchstr (line0, "http[^]\"\) ]*")
+
+  if line==""
+      let line=matchstr (line0, "ftp[^\"\) ]*")
+  endif
+
+  if line==""
+      let line=matchstr (line0, "file[^\"\) ]*")
+  endif
+
+  let line= escape (line, "#?&;|%")
+  exec ':silent !open ' . line
+endfunction
+nnoremap <silent> gx :call LinkInterceptor()<CR>
 
 " Make C-a work in command line mode (to match C-e)
 cnoremap <C-a> <Home>
@@ -102,6 +108,15 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 " Map <Space> to search and <leader><Space> to backwards search
 map <space> /
 map <leader><space> ?
+
+" Completions
+" ===========
+"
+" Recommended shortcuts from 'ins-completion' help file
+inoremap <C-]> <C-X><C-]>
+inoremap <C-F> <C-X><C-F>
+inoremap <C-D> <C-X><C-D>
+inoremap <C-L> <C-X><C-L>
 
 " Clear the search buffer when hitting return
 nnoremap ,<cr> :nohlsearch<cr>
@@ -209,3 +224,56 @@ map <leader>s? z=
 "
 " Add to index with ,ga
 map <leader>ga :silent !git add % &<cr><cr>
+
+" Show git diff for current file
+map <leader>d :!git diff %<CR>
+
+" Plugins
+" =======
+
+" ALE
+" ===
+"
+" Jump to next and previous error
+nmap <silent> <leader>nn :ALENext<cr>
+nmap <silent> <leader>pp :ALEPrevious<cr>
+
+" FZF
+" ===
+
+" Start FZF with CTRL-P
+nmap <C-P> :FZF<CR>
+
+" vim-test
+" ========
+"
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
+
+" Livedown
+" ========
+"
+" Press gm to preview markdown file
+map gm :LivedownPreview<CR>
+
+" AG
+" ==
+
+" Search for word under cursor with ag
+noremap <Leader>a :Ag <cword><cr>
+
+" Search visual selection with ag
+vnoremap <Leader>a y:Ag <C-r>=fnameescape(@")<CR><CR>
+
+" Call Ag with ag
+cabbrev ag Ag
+
+" Eunuch
+" ======
+
+" Eunuch mappings
+map <leader>m :Move %%
+

@@ -67,3 +67,11 @@ f(){
   IFS=$'\n' files=($(fzf))
   [[ -n "$files" ]] && vim "${files[@]}"
 }
+
+emi() {
+  $EDITOR $(find -E db/migrate -type f | sort | tail -n 1)
+}
+
+demi() {
+  $EDITOR $(find -E db/data/ -type f | sort | tail -n 1)
+}

@@ -3,7 +3,6 @@
 
 # dir stuff
 alias ..='cd ..'
-alias l='ls'
 alias lss='ls++'
 # alias cat='ccat'
 
@@ -25,15 +24,20 @@ alias rat='./bin/rake test'
 alias m="./bin/rake db:migrate"
 alias rollback="./bin/rake db:rollback"
 alias g="e Gemfile"
-alias c="./bin/rails console"
+alias c="spring rails console"
 
-function gcm(){
-  git commit -m "$*"
-}
-
-function gcam(){
-  git commit -am "$*"
-}
+alias d="git d"
+alias s="git s"
+alias l="git l"
+alias a="git add"
+alias ca="git commit --amend"
+alias cm="git commit"
+alias co="git co"
+alias dc="git d --cached"
+alias pr="git pull --rebase"
+alias psh="git push"
+alias pshf="git push --force-with-lease"
+alias show="git show"
 
 function release(){
   version=$1
@@ -51,7 +55,6 @@ alias nd="npm docs"
 
 # misc
 alias g="git"
-alias s="sudo"
 alias so="source"
 alias t="tmux -2"
 alias ip="curl -s icanhazip.com"

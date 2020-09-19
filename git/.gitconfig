@@ -47,7 +47,11 @@
 	compactionHeuristic = true
 [commit]
 	gpgsign = true
+	template = /Users/hrvoje/.gitmessage
 [diff-so-fancy]
 	markEmptyLines = false
 [init]
 	templatedir = ~/.git_template
+[branch]
+	sort = -committerdate
+	autosetuprebase = always

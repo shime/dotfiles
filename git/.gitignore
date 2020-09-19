@@ -6,3 +6,4 @@ Procfile.local
 *.dump
 *.dump.*
 fun.rb
+snippets/

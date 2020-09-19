@@ -98,6 +98,8 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^ ' autosuggest-accept
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="/usr/local/opt/curl/bin:$PATH"
+export PATH="/usr/local/opt/libxml2/bin:$PATH"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
@@ -110,6 +112,3 @@ bindkey '^xe' edit-command-line
 bindkey '^x^e' edit-command-line
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-export PATH="/usr/local/opt/libxml2/bin:$PATH"
-export NOTES_DIR=~/Documents/Notes
